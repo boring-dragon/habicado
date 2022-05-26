@@ -4,7 +4,7 @@ window.customElements.define(
     constructor() {
       super();
 
-      Capacitor.Plugins.SplashScreen.hide();
+      // Capacitor.Plugins.SplashScreen.hide();
 
       const root = this.attachShadow({ mode: 'open' });
 
