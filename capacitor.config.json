@@ -1,0 +1,6 @@
+{
+  "appId": "com.habbit.app",
+  "appName": "habit-tracker",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
