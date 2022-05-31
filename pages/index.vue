@@ -1,5 +1,5 @@
 <template>
-  <Tutorial/>
+  <p>Dashboard Page</p>
 </template>
 
 <script>

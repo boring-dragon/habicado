@@ -1,9 +1,38 @@
 [
   {
+    "name": "Habits-Index",
+    "path": "/Habits/Index",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Habits/Index.vue",
+    "chunkName": "pages/Habits/Index"
+  },
+  {
+    "name": "Login-Index",
+    "path": "/Login/Index",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Login/Index.vue",
+    "chunkName": "pages/Login/Index"
+  },
+  {
+    "name": "Profile-Index",
+    "path": "/Profile/Index",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Profile/Index.vue",
+    "chunkName": "pages/Profile/Index"
+  },
+  {
+    "name": "Register-Index",
+    "path": "/Register/Index",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Register/Index.vue",
+    "chunkName": "pages/Register/Index"
+  },
+  {
+    "name": "Settings-Index",
+    "path": "/Settings/Index",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Settings/Index.vue",
+    "chunkName": "pages/Settings/Index"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_b67a29ec"
+    "chunkName": "pages/index"
   }
 ]

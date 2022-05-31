@@ -4,6 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _860bed8c = () => interopDefault(import('../pages/Habits/Index.vue' /* webpackChunkName: "pages/Habits/Index" */))
+const _4d470fa4 = () => interopDefault(import('../pages/Login/Index.vue' /* webpackChunkName: "pages/Login/Index" */))
+const _80b88c38 = () => interopDefault(import('../pages/Profile/Index.vue' /* webpackChunkName: "pages/Profile/Index" */))
+const _65092d5e = () => interopDefault(import('../pages/Register/Index.vue' /* webpackChunkName: "pages/Register/Index" */))
+const _96064a44 = () => interopDefault(import('../pages/Settings/Index.vue' /* webpackChunkName: "pages/Settings/Index" */))
 const _b67a29ec = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -18,6 +23,26 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/Habits/Index",
+    component: _860bed8c,
+    name: "Habits-Index"
+  }, {
+    path: "/Login/Index",
+    component: _4d470fa4,
+    name: "Login-Index"
+  }, {
+    path: "/Profile/Index",
+    component: _80b88c38,
+    name: "Profile-Index"
+  }, {
+    path: "/Register/Index",
+    component: _65092d5e,
+    name: "Register-Index"
+  }, {
+    path: "/Settings/Index",
+    component: _96064a44,
+    name: "Settings-Index"
+  }, {
     path: "/",
     component: _b67a29ec,
     name: "index"
