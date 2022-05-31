@@ -3,36 +3,42 @@
     "name": "Habits-Index",
     "path": "/Habits/Index",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Habits/Index.vue",
-    "chunkName": "pages/Habits/Index"
+    "chunkName": "pages/Habits/Index",
+    "_name": "_860bed8c"
   },
   {
     "name": "Login-Index",
     "path": "/Login/Index",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Login/Index.vue",
-    "chunkName": "pages/Login/Index"
+    "chunkName": "pages/Login/Index",
+    "_name": "_4d470fa4"
   },
   {
     "name": "Profile-Index",
     "path": "/Profile/Index",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Profile/Index.vue",
-    "chunkName": "pages/Profile/Index"
+    "chunkName": "pages/Profile/Index",
+    "_name": "_80b88c38"
   },
   {
     "name": "Register-Index",
     "path": "/Register/Index",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Register/Index.vue",
-    "chunkName": "pages/Register/Index"
+    "chunkName": "pages/Register/Index",
+    "_name": "_65092d5e"
   },
   {
     "name": "Settings-Index",
     "path": "/Settings/Index",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Settings/Index.vue",
-    "chunkName": "pages/Settings/Index"
+    "chunkName": "pages/Settings/Index",
+    "_name": "_96064a44"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_b67a29ec"
   }
 ]
