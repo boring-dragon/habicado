@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.app",
+	"appName": "habittaskandtracker-vuejs-ios",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

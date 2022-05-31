@@ -1,35 +1,44 @@
-## Created with Capacitor Create App
+# habitTaskAndTracker
 
-This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app),
-and comes with a very minimal shell for building an app.
-
-### Prerequesites
-
-To install node_modules
-```bash
+<!-- ## Project setup
+```
 npm install
 ```
 
-To install IOS
-```bash
-npx cap add ios
+### Compiles and hot-reloads for development
+```
+npm run serve
 ```
 
-To install Android
-```bash
-npx cap add android
+### Compiles and minifies for production
+```
+npm run build
 ```
 
-### Running
-
-To run the website:
-In a www folder.
-```bash
-npx serve
+### Lints and fixes files
+```
+npm run lint
 ```
 
-To run the IOS and Android mobile apps:
-In habitTaskAndTracker folder.
-```bash
-npx cap run
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/). -->
+
+## YOU NEED TO DO THIS BEFORE RUNNING
+```
+npm install
+```
+
+## How to run ios on xcode
+```
+npx cap open ios
+```
+
+## How to run website
+```
+npm run serve
+```
+
+## How to run ios on cocoapods
+```
+npx cap open android
 ```

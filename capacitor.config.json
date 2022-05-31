@@ -1,11 +1,6 @@
 {
   "appId": "com.example.app",
   "appName": "habitTaskAndTracker",
-  "bundledWebRuntime": false,
-  "webDir": "www",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
-    }
-  }
+  "webDir": "dist",
+  "bundledWebRuntime": false
 }
