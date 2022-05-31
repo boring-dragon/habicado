@@ -1,4 +1,4 @@
-# habitTaskAndTracker
+# habitAndTaskTracker
 
 <!-- ## Project setup
 ```
@@ -38,7 +38,7 @@ npx cap open ios
 npm run serve
 ```
 
-## How to run ios on cocoapods
+## How to run android on cocoapods
 ```
 npx cap open android
 ```

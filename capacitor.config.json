@@ -1,6 +1,6 @@
 {
   "appId": "com.example.app",
-  "appName": "habitTaskAndTracker",
+  "appName": "habitAndTaskTracker",
   "webDir": "dist",
   "bundledWebRuntime": false
 }
