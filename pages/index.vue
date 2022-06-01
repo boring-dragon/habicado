@@ -1,12 +1,16 @@
 <template>
   <div>
-    <div class="ml-9 mt-5">
-      <p class="text-2xl text-black-500 font-bold">Welcome Back 👋</p>
-      <p>{{ user.username }}</p>
-      <img src="" alt="profile">
-    </div>
+    <div class="w-4/5 container mx-auto">
+      <div class="float-left">
+        <p class="text-2xl text-black-500 font-bold">Welcome Back 👋</p>
+        <p>{{ user.username }}</p>
+      </div>
+      <div class="float-right">
+        <img src="" alt="profile">
+      </div>
+    </div><br><br><br>
 
-    <div>
+    <div class="w-4/5 p-5 mx-auto px-5 bg-green-300 float-none">
       <img src="" alt="profile">
       <p>Character Profile</p>
       <div class="mb-1 text-base font-medium dark:text-black">Health</div>
@@ -23,24 +27,26 @@
       </div>
     </div>
 
-    <div>
-      <p>Your progress</p>
-      <p>{{ parseInt(completedTasks/Object.keys(user.tasks).length*100) }}%</p>
+    <div class="w-4/5 p-5 container mx-auto px-5 bg-green-300 mt-3">
+      <p class="float-left">Your progress</p>
+      <p class="float-right">{{ parseInt(completedTasks/Object.keys(user.tasks).length*100) }}%</p><br>
       <p> {{ completedTasks }} of {{ Object.keys(user.tasks).length }} Completed</p>
       <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-white-700">
         <div class="bg-gray-600 h-1.5 rounded-full dark:bg-grey-300" :style="{ 'width': completedTasks/Object.keys(user.tasks).length*100 + '%' }"></div>
       </div>
     </div>
 
-    <div>
-      <div class="flex-1">
-        <p>All Habits</p>
-        <p>see all</p>
-      </div>
-      <li v-for="item in user.tasks">
-        {{ item.name }}: {{ item.done }} of {{ item.total }} completed 
-      </li>
-
+    <div class="w-4/5 container mx-auto mt-3">
+      <p class="float-left">All Habits</p>
+      <p class="float-right">see all</p><br>
+      <ol>
+        <li v-for="item in user.tasks">
+          <div class="bg-slate-700 px-5 p-5">
+            <p class="text-white">{{ item.name }}</p>
+            <p class="text-green-300">{{ item.done }} of {{ item.total }} completed</p>
+          </div><br>
+        </li>
+      </ol>
     </div>
 
   </div>
