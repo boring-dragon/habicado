@@ -10,7 +10,7 @@
       </div>
     </div><br><br><br>
 
-    <div class="w-4/5 p-5 mx-auto px-5 bg-green-300 float-none">
+    <div class="w-4/5 p-5 mx-auto px-5 bg-secondary float-none rounded-xl">
       <img src="" alt="profile">
       <p>Character Profile</p>
       <div class="mb-1 text-base font-medium dark:text-black">Health</div>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="w-4/5 p-5 container mx-auto px-5 bg-green-300 mt-3">
+    <div class="w-4/5 p-5 container mx-auto px-5 bg-secondary mt-3 rounded-xl">
       <p class="float-left">Your progress</p>
       <p class="float-right">{{ parseInt(completedTasks/Object.keys(user.tasks).length*100) }}%</p><br>
       <p> {{ completedTasks }} of {{ Object.keys(user.tasks).length }} Completed</p>
@@ -41,9 +41,9 @@
       <p class="float-right">see all</p><br>
       <ol>
         <li v-for="item in user.tasks">
-          <div class="bg-slate-700 px-5 p-5">
+          <div class="bg-slate-700 px-5 p-5 rounded-xl">
             <p class="text-white">{{ item.name }}</p>
-            <p class="text-green-300">{{ item.done }} of {{ item.total }} completed</p>
+            <p class="text-secondary">{{ item.done }} of {{ item.total }} completed</p>
           </div><br>
         </li>
       </ol>
