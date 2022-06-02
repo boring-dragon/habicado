@@ -5,7 +5,6 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _860bed8c = () => interopDefault(import('../pages/Habits/Index.vue' /* webpackChunkName: "pages/Habits/Index" */))
-const _015be204 = () => interopDefault(import('../pages/Layout/AppLayout.vue' /* webpackChunkName: "pages/Layout/AppLayout" */))
 const _4d470fa4 = () => interopDefault(import('../pages/Login/Index.vue' /* webpackChunkName: "pages/Login/Index" */))
 const _80b88c38 = () => interopDefault(import('../pages/Profile/Index.vue' /* webpackChunkName: "pages/Profile/Index" */))
 const _65092d5e = () => interopDefault(import('../pages/Register/Index.vue' /* webpackChunkName: "pages/Register/Index" */))
@@ -27,10 +26,6 @@ export const routerOptions = {
     path: "/Habits/Index",
     component: _860bed8c,
     name: "Habits-Index"
-  }, {
-    path: "/Layout/AppLayout",
-    component: _015be204,
-    name: "Layout-AppLayout"
   }, {
     path: "/Login/Index",
     component: _4d470fa4,

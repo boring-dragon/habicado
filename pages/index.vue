@@ -53,7 +53,9 @@
 </template>
 
 <script>
+
 export default {
+  layout: 'default',
   name: 'IndexPage',
   data() {
     return {
