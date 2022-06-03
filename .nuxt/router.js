@@ -4,12 +4,14 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _860bed8c = () => interopDefault(import('../pages/Habits/Index.vue' /* webpackChunkName: "pages/Habits/Index" */))
-const _4d470fa4 = () => interopDefault(import('../pages/Login/Index.vue' /* webpackChunkName: "pages/Login/Index" */))
-const _80b88c38 = () => interopDefault(import('../pages/Profile/Index.vue' /* webpackChunkName: "pages/Profile/Index" */))
-const _65092d5e = () => interopDefault(import('../pages/Register/Index.vue' /* webpackChunkName: "pages/Register/Index" */))
-const _96064a44 = () => interopDefault(import('../pages/Settings/Index.vue' /* webpackChunkName: "pages/Settings/Index" */))
-const _b67a29ec = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _ca6c5416 = () => interopDefault(import('../pages/Archive/Index.vue' /* webpackChunkName: "pages/Archive/Index" */))
+const _58f7dbfc = () => interopDefault(import('../pages/Habits/Index.vue' /* webpackChunkName: "pages/Habits/Index" */))
+const _76b3f144 = () => interopDefault(import('../pages/Insights/Index.vue' /* webpackChunkName: "pages/Insights/Index" */))
+const _1c74cddc = () => interopDefault(import('../pages/Login/Index.vue' /* webpackChunkName: "pages/Login/Index" */))
+const _7a5aca1c = () => interopDefault(import('../pages/Profile/Index.vue' /* webpackChunkName: "pages/Profile/Index" */))
+const _01342426 = () => interopDefault(import('../pages/Register/Index.vue' /* webpackChunkName: "pages/Register/Index" */))
+const _5127d1a6 = () => interopDefault(import('../pages/Settings/Index.vue' /* webpackChunkName: "pages/Settings/Index" */))
+const _406c997c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -23,28 +25,36 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/Archive/Index",
+    component: _ca6c5416,
+    name: "Archive-Index"
+  }, {
     path: "/Habits/Index",
-    component: _860bed8c,
+    component: _58f7dbfc,
     name: "Habits-Index"
   }, {
+    path: "/Insights/Index",
+    component: _76b3f144,
+    name: "Insights-Index"
+  }, {
     path: "/Login/Index",
-    component: _4d470fa4,
+    component: _1c74cddc,
     name: "Login-Index"
   }, {
     path: "/Profile/Index",
-    component: _80b88c38,
+    component: _7a5aca1c,
     name: "Profile-Index"
   }, {
     path: "/Register/Index",
-    component: _65092d5e,
+    component: _01342426,
     name: "Register-Index"
   }, {
     path: "/Settings/Index",
-    component: _96064a44,
+    component: _5127d1a6,
     name: "Settings-Index"
   }, {
     path: "/",
-    component: _b67a29ec,
+    component: _406c997c,
     name: "index"
   }],
 

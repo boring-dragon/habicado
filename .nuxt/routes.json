@@ -1,44 +1,58 @@
 [
   {
+    "name": "Archive-Index",
+    "path": "/Archive/Index",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Archive/Index.vue",
+    "chunkName": "pages/Archive/Index",
+    "_name": "_ca6c5416"
+  },
+  {
     "name": "Habits-Index",
     "path": "/Habits/Index",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Habits/Index.vue",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Habits/Index.vue",
     "chunkName": "pages/Habits/Index",
-    "_name": "_860bed8c"
+    "_name": "_58f7dbfc"
+  },
+  {
+    "name": "Insights-Index",
+    "path": "/Insights/Index",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Insights/Index.vue",
+    "chunkName": "pages/Insights/Index",
+    "_name": "_76b3f144"
   },
   {
     "name": "Login-Index",
     "path": "/Login/Index",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Login/Index.vue",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Login/Index.vue",
     "chunkName": "pages/Login/Index",
-    "_name": "_4d470fa4"
+    "_name": "_1c74cddc"
   },
   {
     "name": "Profile-Index",
     "path": "/Profile/Index",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Profile/Index.vue",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Profile/Index.vue",
     "chunkName": "pages/Profile/Index",
-    "_name": "_80b88c38"
+    "_name": "_7a5aca1c"
   },
   {
     "name": "Register-Index",
     "path": "/Register/Index",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Register/Index.vue",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Register/Index.vue",
     "chunkName": "pages/Register/Index",
-    "_name": "_65092d5e"
+    "_name": "_01342426"
   },
   {
     "name": "Settings-Index",
     "path": "/Settings/Index",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Settings/Index.vue",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Settings/Index.vue",
     "chunkName": "pages/Settings/Index",
-    "_name": "_96064a44"
+    "_name": "_5127d1a6"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/index.vue",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_b67a29ec"
+    "_name": "_406c997c"
   }
 ]

@@ -6,7 +6,7 @@
 			</div>
 			<section class="block fixed inset-x-0 bottom-0 z-10 bg-secondary shadow rounded-t-[32px]">
 				<div class="flex justify-between" id="tabs">
-					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-white" href="#">
+					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-white" href="/">
 						<div class="p-2 mx-16 bg-primary rounded-xl">
 							<svg class="inline-block mb-1" fill="none" height="25" viewBox="0 0 24 24" width="25">
 								<path d="M6.75024 19.2502H17.2502C18.3548 19.2502 19.2502 18.3548 19.2502 17.2502V9.75025L12.0002 4.75024L4.75024 9.75025V17.2502C4.75024 18.3548 5.64568 19.2502 6.75024 19.2502Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
@@ -16,7 +16,7 @@
 							<span class="block text-xs">Home</span>
 						</div>
 					</a>
-					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="#">
+					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="/Insights/Index">
 						<svg class="inline-block mb-1" fill="none" height="25" viewBox="0 0 24 24" width="25">
 							<path d="M4.75 8.75C4.75 7.64543 5.64543 6.75 6.75 6.75H17.25C18.3546 6.75 19.25 7.64543 19.25 8.75V17.25C19.25 18.3546 18.3546 19.25 17.25 19.25H6.75C5.64543 19.25 4.75 18.3546 4.75 17.25V8.75Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
 							<path d="M8 4.75V8.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
@@ -26,7 +26,7 @@
 
 						<span class="block text-xs">Insight</span>
 					</a>
-					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="#">
+					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="/Habits/Index">
 						<div class="p-2">
 							<svg class="inline-block mb-1" fill="none" height="25" viewBox="0 0 24 24" width="25">
 								<path d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
@@ -37,7 +37,7 @@
 							<span class="block text-xs">New habbit</span>
 						</div>
 					</a>
-					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="#">
+					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="/Archive/Index">
 						<div class="p-2">
 							<svg class="inline-block mb-1" fill="none" height="25" viewBox="0 0 24 24" width="25">
 								<path d="M6.75 6.75C6.75 5.64543 7.64543 4.75 8.75 4.75H15.25C16.3546 4.75 17.25 5.64543 17.25 6.75V19.25L12 14.75L6.75 19.25V6.75Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
@@ -46,7 +46,7 @@
 							<span class="block text-xs">Archive</span>
 						</div>
 					</a>
-					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="#">
+					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-primary" href="/Settings/Index">
 						<div class="p-2">
 							<svg class="inline-block mb-1" fill="none" height="25" viewBox="0 0 24 24" width="25">
 								<path d="M4.75 8H7.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
