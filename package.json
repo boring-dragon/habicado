@@ -11,10 +11,13 @@
   "dependencies": {
     "@capacitor/core": "^3.5.1",
     "@capacitor/ios": "^3.5.1",
+    "@romanran/vue-simple-calendar": "^1.4.2",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
+    "v-calendar": "^2.4.1",
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
+    "vue-single-date-picker": "^0.5.12",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
   },

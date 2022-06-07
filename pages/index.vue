@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-y-scroll h-[36rem] mt-5">
     <div class="w-4/5 container mx-auto">
       <div class="float-left">
         <p class="text-2xl text-black-500 font-bold">Welcome Back 👋</p>
