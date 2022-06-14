@@ -9,18 +9,17 @@ export default {
 	return {
 
 	}
-  },
-
-   mounted () {
-    console.log(this.$route.fullPath)
-  },
+  }
 };
 </script>
 <template>
 	<div>
 		<div class="w-full h-screen">
-			<div>
-				<nuxt />
+			<div class="container mx-auto">
+				<div class="max-w-3xl">
+						<nuxt />
+				</div>
+			
 			</div>
 			<section class="block fixed inset-x-0 bottom-0 z-10 bg-secondary rounded-t-[25px] shadow" v-if="$route.fullPath !== '/'">
 				<div class="flex items-center justify-between px-2" id="tabs">
