@@ -19,7 +19,11 @@
             </div>
             <p class="text-white ml-2">Password</p>
             <input type="text" class="bg-secondary w-full rounded-xl" placeholder="Password">
-            <button class="mt-9 bg-secondary w-full rounded-xl float-bottom">Continue ></button>
+            
+            <button class="mt-36 bg-secondary w-full rounded-xl float-bottom" @click="$router.push('/Login/Index')">
+                <label class="ml-3"> Continue </label>
+                <label class="float-right mr-3"> > </label>
+            </button>
         </div>
     </div>
 </template>

@@ -6,7 +6,7 @@
 			</div>
 			<section class="block fixed inset-x-0 bottom-0 z-10 bg-secondary shadow rounded-t-[32px]">
 				<div class="flex justify-between" id="tabs">
-					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-white" href="/">
+					<a class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1 text-white" href="/Home/Index">
 						<div class="p-2 mx-16 bg-primary rounded-xl">
 							<svg class="inline-block mb-1" fill="none" height="25" viewBox="0 0 24 24" width="25">
 								<path d="M6.75024 19.2502H17.2502C18.3548 19.2502 19.2502 18.3548 19.2502 17.2502V9.75025L12.0002 4.75024L4.75024 9.75025V17.2502C4.75024 18.3548 5.64568 19.2502 6.75024 19.2502Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />

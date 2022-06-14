@@ -14,6 +14,13 @@
     "_name": "_58f7dbfc"
   },
   {
+    "name": "Home-Index",
+    "path": "/Home/Index",
+    "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Home/Index.vue",
+    "chunkName": "pages/Home/Index",
+    "_name": "_6284993c"
+  },
+  {
     "name": "Insights-Index",
     "path": "/Insights/Index",
     "component": "/Users/ubc/Development/Web/habitTaskAndTracker/pages/Insights/Index.vue",

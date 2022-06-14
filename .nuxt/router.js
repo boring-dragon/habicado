@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _ca6c5416 = () => interopDefault(import('../pages/Archive/Index.vue' /* webpackChunkName: "pages/Archive/Index" */))
 const _58f7dbfc = () => interopDefault(import('../pages/Habits/Index.vue' /* webpackChunkName: "pages/Habits/Index" */))
+const _6284993c = () => interopDefault(import('../pages/Home/Index.vue' /* webpackChunkName: "pages/Home/Index" */))
 const _76b3f144 = () => interopDefault(import('../pages/Insights/Index.vue' /* webpackChunkName: "pages/Insights/Index" */))
 const _1c74cddc = () => interopDefault(import('../pages/Login/Index.vue' /* webpackChunkName: "pages/Login/Index" */))
 const _7a5aca1c = () => interopDefault(import('../pages/Profile/Index.vue' /* webpackChunkName: "pages/Profile/Index" */))
@@ -32,6 +33,10 @@ export const routerOptions = {
     path: "/Habits/Index",
     component: _58f7dbfc,
     name: "Habits-Index"
+  }, {
+    path: "/Home/Index",
+    component: _6284993c,
+    name: "Home-Index"
   }, {
     path: "/Insights/Index",
     component: _76b3f144,
