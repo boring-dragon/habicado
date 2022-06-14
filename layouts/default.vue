@@ -13,10 +13,10 @@ export default {
 };
 </script>
 <template>
-	<div>
+	<div style="font-family: 'Poppins', sans-serif;">
 		<div class="w-full h-screen">
 			<div class="container mx-auto">
-				<div class="max-w-3xl">
+				<div class="max-w-6xl">
 						<nuxt />
 				</div>
 			
