@@ -14,9 +14,9 @@
     "@nuxtjs/auth-next": "5.0.0-1648802546.c9880dc",
     "@nuxtjs/axios": "^5.13.6",
     "@romanran/vue-simple-calendar": "^1.4.2",
+    "@vuepic/vue-datepicker": "^3.2.2",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
-    "v-calendar": "^2.4.1",
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
     "vue-single-date-picker": "^0.5.12",
@@ -31,6 +31,7 @@
     "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "v-calendar": "^1.0.0-beta.22"
   }
 }

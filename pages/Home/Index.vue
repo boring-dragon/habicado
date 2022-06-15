@@ -1,9 +1,9 @@
 <template>
-	<div class="overflow-y-scroll h-[36rem] sm:h-full mt-5 p-5 space-y-8">
+	<div class="overflow-y-scroll h-[32rem] sm:h-full p-5 space-y-8">
 		<div class="flex justify-between items-center">
 			<div>
-				<p class="text-2xl text-black-500 font-bold">Welcome Back 👋</p>
-				<p>{{ user.username }}</p>
+				<p class="text-1xl text-primary font-bold">Welcome Back 👋</p>
+				<p class="text-primary">{{ user.username }}</p>
 			</div>
 			<div>
 				<div class="w-8 h-8 bg-secondary rounded-full"></div>

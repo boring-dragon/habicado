@@ -9,7 +9,7 @@
             <input type="text" class="bg-secondary w-full rounded-xl" placeholder="Username">
             <p class="text-white">Password</p>
             <input type="text" class="bg-secondary w-full rounded-xl" placeholder="Password">
-            <button class="mt-36 bg-secondary w-full rounded-xl float-bottom" @click="$router.push('/Home/Index')">
+            <button class="mt-36 bg-secondary w-full rounded-xl float-bottom" @click="$router.push('/home')">
                 <label class="ml-3"> Continue </label>
                 <label class="float-right mr-3"> > </label>
             </button>

@@ -10,7 +10,7 @@
         <center>
           <img src="" alt="logo">
           <p class="text-secondary mt-3"> Welcome <br> To <br> Habicado </p>
-          <button class="mt-36 bg-secondary w-full rounded-xl float-bottom" @click="$router.push('/Register/Index')">
+          <button class="mt-36 bg-secondary w-full rounded-xl float-bottom" @click="$router.push('/register')">
             <label class="ml-3"> Continue </label>
             <label class="float-right mr-3"> > </label>
           </button>
