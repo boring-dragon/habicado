@@ -1,4 +1,8 @@
 <script>
+/*
+	npm remove v-calender
+	npm i v-calendar@1.0.0-beta.22
+*/
 import Calendar from 'v-calendar/lib/components/calendar.umd'
 
 export default {

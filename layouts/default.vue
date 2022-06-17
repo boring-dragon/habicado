@@ -21,7 +21,7 @@ export default {
 				</div>
 			
 			</div>
-			<section class="block fixed inset-x-0 bottom-0 z-10 bg-secondary rounded-t-[25px] shadow" v-if="$route.fullPath !== '/'">
+			<section class="block fixed inset-x-0 bottom-0 z-10 bg-secondary rounded-t-[25px] shadow" v-if="$route.fullPath !== '/' && $route.fullPath !== '/register' && $route.fullPath !== '/login'">
 				<div class="flex items-center justify-between px-2" id="tabs">
 					<nav-link :active="$route.fullPath === '/home'" name="Home" to="/home">
 						<template #icon>
