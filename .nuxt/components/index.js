@@ -1,3 +1,4 @@
+export { default as Modal } from '../../components/Modal.vue'
 export { default as NavLink } from '../../components/NavLink.vue'
 export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
 export { default as FormButton } from '../../components/Form/Button.vue'

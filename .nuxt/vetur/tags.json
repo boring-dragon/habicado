@@ -1,4 +1,7 @@
 {
+  "Modal": {
+    "description": "Auto imported from components/Modal.vue"
+  },
   "NavLink": {
     "description": "Auto imported from components/NavLink.vue"
   },

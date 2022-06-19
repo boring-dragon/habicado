@@ -21,6 +21,7 @@
     "vue-server-renderer": "^2.6.14",
     "vue-single-date-picker": "^0.5.12",
     "vue-template-compiler": "^2.6.14",
+    "vue-universal-modal": "^1.1.3",
     "webpack": "^4.46.0"
   },
   "devDependencies": {

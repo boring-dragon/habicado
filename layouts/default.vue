@@ -1,14 +1,21 @@
 <script>
 import NavLink from "@/components/NavLink.vue";
+import Modal from '@/components/Modal.vue'
+
 export default {
-  components: {
-    NavLink,
-  },
-
-  data() {
-	return {
-
-	}
+	components: {
+	  NavLink,
+	  Modal
+	},
+	data () {
+		return {
+			showModal: true
+		}
+	},
+	methods: {
+		toggleBottomBar () {
+			this.showModal = !this.showModal
+		}
   }
 };
 </script>
@@ -43,15 +50,20 @@ export default {
 						</template>
 					</nav-link>
 
-					<nav-link :active="false" name="New" to="/">
-						<template #icon>
-							<svg class="inline-block mb-1" fill="none" height="25" viewBox="0 0 24 24" width="25">
-								<path d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-								<path d="M12 8.75003V15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-								<path d="M15.25 12L8.75 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-							</svg>
-						</template>
-					</nav-link>
+					<button class="mt-2 m-1" @click="toggleBottomBar">
+						<svg class="inline-block mb-1" fill="none" height="40" viewBox="0 0 24 24" width="40">
+							<path d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							<path d="M12 8.75003V15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							<path d="M15.25 12L8.75 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+						</svg>
+					</button>
+
+					<modal :should-render="showModal"></modal>
+
+					<!-- <nav-link :active="false" name="New" to="/">
+						<template #icon> -->
+						<!-- </template>
+					</nav-link> -->
 
 					<nav-link :active="$route.fullPath === '/archive'" name="Archive" to="/archive">
 						<template #icon>
