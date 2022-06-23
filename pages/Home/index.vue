@@ -3,7 +3,7 @@
 		<div class="flex justify-between items-center">
 			<div>
 				<p class="text-1xl text-primary font-bold dark:text-white">Welcome Back 👋</p>
-				<p class="text-primary">{{ user.username }}</p>
+				<p class="text-primary dark:text-white">{{ user.username }}</p>
 			</div>
 			<div>
 				<div class="w-8 h-8 bg-secondary rounded-full"></div>
@@ -42,8 +42,8 @@
 
 		<div class="mt-3">
 			<div class="flex items-center justify-between">
-				<p class="text-sm text-gray-700">All Habits</p>
-				<p class="text-sm text-gray-700">see all</p>
+				<p class="text-sm text-gray-700 dark:text-white">All Habits</p>
+				<p class="text-sm text-gray-700 dark:text-white">see all</p>
 			</div>
 
 			<ul class="space-y-6 mt-3">

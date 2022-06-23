@@ -3,13 +3,12 @@ export default {
   props: {
     name: {
       type: String,
-      required: true,
+      required: false,
     },
     active: {
       type: Boolean,
       default: false,
     },
-
     to: {
       type: String,
       required: true,

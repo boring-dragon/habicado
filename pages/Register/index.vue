@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="w-4/5 container mx-auto mt-3">
-            <p class="text-2xl text-black-500"> Register </p>
+        <div class="w-4/5 container mx-auto">
+            <p class="text-2xl text-black-500 dark:text-white p-3"> Register </p>
         </div>
 
         <div class="h-[28rem] w-4/5 p-5 mx-auto px-5 bg-slate-700 rounded-xl mt-3 flex flex-col">

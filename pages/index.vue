@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="w-4/5 container mx-auto mt-3">
+    <div class="w-4/5 container mx-auto">
       <center>
-        <p class="text-2xl text-black-500"> Let's Get Started </p>
+        <p class="text-2xl text-black-500  dark:text-white p-3"> Let's Get Started </p>
       </center>
     </div>
 

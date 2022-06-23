@@ -31,10 +31,10 @@ export default {
 <template>
 	<div class="overflow-y-scroll h-[32rem] sm:h-full p-5 space-y-8">
 		<div>
-			<p class="text-3xl text-slate-700 font-bold">Insights</p>
+			<p class="text-3xl text-slate-700 font-bold dark:text-white">Insights</p>
 			<div class="flex items-center justify-between mt-5">
-				<p class="text-2xl text-slate-700">{{ currentTime.date }}, {{ currentTime.month }}, {{ currentTime.year }}</p>
-				<svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+				<p class="text-2xl text-slate-700 dark:text-white">{{ currentTime.date }}, {{ currentTime.month }}, {{ currentTime.year }}</p>
+				<svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="dark:text-white">
 					<path d="M4.75 8.75C4.75 7.64543 5.64543 6.75 6.75 6.75H17.25C18.3546 6.75 19.25 7.64543 19.25 8.75V17.25C19.25 18.3546 18.3546 19.25 17.25 19.25H6.75C5.64543 19.25 4.75 18.3546 4.75 17.25V8.75Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
 					<path d="M8 4.75V8.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
 					<path d="M16 4.75V8.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
