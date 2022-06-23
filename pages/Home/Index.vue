@@ -2,7 +2,7 @@
 	<div class="overflow-y-scroll h-[32rem] sm:h-full p-5 space-y-8">
 		<div class="flex justify-between items-center">
 			<div>
-				<p class="text-1xl text-primary font-bold">Welcome Back 👋</p>
+				<p class="text-1xl text-primary font-bold dark:text-white">Welcome Back 👋</p>
 				<p class="text-primary">{{ user.username }}</p>
 			</div>
 			<div>

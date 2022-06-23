@@ -20,11 +20,11 @@ export default {
 };
 </script>
 <template>
-	<div style="font-family: 'Poppins', sans-serif;">
+	<div style="font-family: 'Poppins', sans-serif;" class="dark:bg-gray-800">
 		<div class="w-full h-screen">
 			<div class="container mx-auto">
 				<div class="max-w-6xl">
-						<nuxt />
+						<Nuxt />
 				</div>
 			
 			</div>
