@@ -184,13 +184,13 @@ export default {
 				</div>
 				<!-- Modal body -->
 				<div class="p-6">
-					<div v-if='slidePage === 1' class="p-12 text-2xl text-white text-center">Name of your habit
+					<div v-if='slidePage === 1' class="p-12 text-2xl dark:text-white text-center">Name of your habit
 					</div>
-					<div v-if='slidePage === 2' class="p-6 text-2xl text-white text-center">Which area of your life
+					<div v-if='slidePage === 2' class="p-6 text-2xl dark:text-white text-center">Which area of your life
 						do you wanna improve</div>
-					<div v-if='slidePage === 3' class="p-6 text-2xl text-white text-center">When do you wanna
+					<div v-if='slidePage === 3' class="p-6 text-2xl dark:text-white text-center">When do you wanna
 						complete the habit</div>
-					<div v-if='slidePage === 4' class="p-12 text-2xl text-white text-center">Set reminder</div>
+					<div v-if='slidePage === 4' class="p-12 text-2xl dark:text-white text-center">Set reminder</div>
 
 					<input v-if='slidePage === 1' type="text" class="mt-9 bg-secondary w-full rounded-xl"
 						placeholder="Name of a habit" required>

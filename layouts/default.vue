@@ -82,7 +82,7 @@ export default {
 
 					<modal :should-render="showModal" @finishHabitCreation="closeModal"></modal>
 
-					<nav-link :active="$route.fullPath === '/archive'" to="/archive">
+					<nav-link :active="$route.fullPath === '/Profile'" to="/Profile">
 						<template #icon>
 							<!-- <svg class="inline-block mb-1" fill="none" height="40" viewBox="0 0 24 24" width="40">
 								<path d="M6.75 6.75C6.75 5.64543 7.64543 4.75 8.75 4.75H15.25C16.3546 4.75 17.25 5.64543 17.25 6.75V19.25L12 14.75L6.75 19.25V6.75Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
