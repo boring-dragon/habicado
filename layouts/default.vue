@@ -27,7 +27,7 @@ export default {
 	<div style="font-family: 'Poppins', sans-serif;" class="dark:bg-gray-800">
 		<div class="w-full h-screen">
 			<div class="container mx-auto">
-				<div class="max-w-6xl">
+				<div>
 					<Nuxt />
 				</div>
 
