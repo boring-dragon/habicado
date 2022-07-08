@@ -7,9 +7,9 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _4587e95a = () => interopDefault(import('../pages/Habits/index.vue' /* webpackChunkName: "pages/Habits/index" */))
 const _14740e8c = () => interopDefault(import('../pages/Home/index.vue' /* webpackChunkName: "pages/Home/index" */))
 const _9dee1e94 = () => interopDefault(import('../pages/Insights/index.vue' /* webpackChunkName: "pages/Insights/index" */))
-const _54562078 = () => interopDefault(import('../pages/Login/index.vue' /* webpackChunkName: "pages/Login/index" */))
+const _6e6a8e21 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _48319a04 = () => interopDefault(import('../pages/Profile/index.vue' /* webpackChunkName: "pages/Profile/index" */))
-const _24d1e504 = () => interopDefault(import('../pages/Register/index.vue' /* webpackChunkName: "pages/Register/index" */))
+const _0042cb1b = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
 const _3d8abafe = () => interopDefault(import('../pages/Settings/index.vue' /* webpackChunkName: "pages/Settings/index" */))
 const _b67a29ec = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -37,17 +37,17 @@ export const routerOptions = {
     component: _9dee1e94,
     name: "Insights"
   }, {
-    path: "/Login",
-    component: _54562078,
-    name: "Login"
+    path: "/login",
+    component: _6e6a8e21,
+    name: "login"
   }, {
     path: "/Profile",
     component: _48319a04,
     name: "Profile"
   }, {
-    path: "/Register",
-    component: _24d1e504,
-    name: "Register"
+    path: "/register",
+    component: _0042cb1b,
+    name: "register"
   }, {
     path: "/Settings",
     component: _3d8abafe,

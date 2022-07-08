@@ -2,7 +2,7 @@
     <div class="overflow-y-scroll h-[32rem] sm:h-full p-5 space-y-8">
         <div class="flex justify-between items-center">
             <div>
-                <p class="text-3xl text-slate-700 font-bold dark:text-white">Profile</p>
+                <p class="text-3xl text-slate-700 font-bold dark:text-white">Character Profile</p>
             </div>
             <div>
                 <div class="w-8 h-8 bg-secondary rounded-full"></div>

@@ -19,6 +19,10 @@ export default {
     ]
   },
 
+  env: {
+    backendUrl: process.env.NUXT_PUBLIC_BACKEND_URL
+  },
+
   googleFonts: {
     families: {
       Poppins: [100, 200, 300, 400, 500, 600, 700, 800, 900],
@@ -45,7 +49,27 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+
+  axios: {
+    baseURL: process.env.NUXT_PUBLIC_BACKEND_URL,
+    credentials: true
+  },
+
+  auth: {
+    strategies: {
+      laravelSanctum: {
+        provider: 'laravel/sanctum',
+        url: process.env.NUXT_PUBLIC_BACKEND_URL
+      },
+    }
+  },
+
+  router: {
+    middleware: ['auth']
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

@@ -21,11 +21,11 @@
     "_name": "_9dee1e94"
   },
   {
-    "name": "Login",
-    "path": "/Login",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Login/index.vue",
-    "chunkName": "pages/Login/index",
-    "_name": "_54562078"
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_6e6a8e21"
   },
   {
     "name": "Profile",
@@ -35,11 +35,11 @@
     "_name": "_48319a04"
   },
   {
-    "name": "Register",
-    "path": "/Register",
-    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Register/index.vue",
-    "chunkName": "pages/Register/index",
-    "_name": "_24d1e504"
+    "name": "register",
+    "path": "/register",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/register.vue",
+    "chunkName": "pages/register",
+    "_name": "_0042cb1b"
   },
   {
     "name": "Settings",

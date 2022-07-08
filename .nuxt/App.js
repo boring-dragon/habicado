@@ -11,8 +11,9 @@ import '../assets/css/main.css'
 import '../assets/css/fonts.css'
 
 import _6f6c098b from '../layouts/default.vue'
+import _7762aba2 from '../layouts/guest.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_guest": sanitizeComponent(_7762aba2) }
 
 export default {
   render (h, props) {

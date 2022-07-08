@@ -8,10 +8,37 @@
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },
-  "FormButton": {
-    "description": "Auto imported from components/Form/Button.vue"
+  "AuthApplicationLogo": {
+    "description": "Auto imported from components/auth/application-logo.vue"
   },
-  "FormInput": {
-    "description": "Auto imported from components/Form/Input.vue"
+  "AuthButton": {
+    "description": "Auto imported from components/auth/button.vue"
+  },
+  "AuthCheckbox": {
+    "description": "Auto imported from components/auth/checkbox.vue"
+  },
+  "AuthDropdownButton": {
+    "description": "Auto imported from components/auth/dropdown-button.vue"
+  },
+  "AuthDropdown": {
+    "description": "Auto imported from components/auth/dropdown.vue"
+  },
+  "AuthInput": {
+    "description": "Auto imported from components/auth/input.vue"
+  },
+  "AuthLabel": {
+    "description": "Auto imported from components/auth/label.vue"
+  },
+  "AuthNavLink": {
+    "description": "Auto imported from components/auth/nav-link.vue"
+  },
+  "AuthResponsiveNavLink": {
+    "description": "Auto imported from components/auth/responsive-nav-link.vue"
+  },
+  "AuthToggle": {
+    "description": "Auto imported from components/auth/toggle.vue"
+  },
+  "AuthValidationErrors": {
+    "description": "Auto imported from components/auth/validation-errors.vue"
   }
 }
