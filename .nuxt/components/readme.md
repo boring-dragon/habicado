@@ -8,7 +8,6 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Modal>` | `<modal>` (components/Modal.vue)
 - `<NavLink>` | `<nav-link>` (components/NavLink.vue)
-- `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<AuthApplicationLogo>` | `<auth-application-logo>` (components/auth/application-logo.vue)
 - `<AuthButton>` | `<auth-button>` (components/auth/button.vue)
 - `<AuthCheckbox>` | `<auth-checkbox>` (components/auth/checkbox.vue)

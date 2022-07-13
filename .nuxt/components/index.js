@@ -1,6 +1,5 @@
 export { default as Modal } from '../../components/Modal.vue'
 export { default as NavLink } from '../../components/NavLink.vue'
-export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
 export { default as AuthApplicationLogo } from '../../components/auth/application-logo.vue'
 export { default as AuthButton } from '../../components/auth/button.vue'
 export { default as AuthCheckbox } from '../../components/auth/checkbox.vue'

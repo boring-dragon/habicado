@@ -2,7 +2,7 @@
 import ApplicationLogo from '@/components/auth/application-logo.vue';
 
 export default {
-    auth: 'guest',
+    //auth: 'guest',
 	components: {
 		ApplicationLogo
 	}
