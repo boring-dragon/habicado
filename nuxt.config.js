@@ -58,6 +58,8 @@ export default {
     credentials: true
   },
 
+
+  /*
   auth: {
     strategies: {
       laravelSanctum: {
@@ -70,6 +72,8 @@ export default {
   router: {
     middleware: ['auth']
   },
+
+  */
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

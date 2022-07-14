@@ -2,7 +2,6 @@ import Middleware from './middleware'
 import { Auth, authMiddleware, ExpiredAuthSessionError } from '~auth/runtime'
 
 // Active schemes
-import { CookieScheme } from '~auth/runtime'
 
 Middleware.auth = authMiddleware
 
@@ -33,62 +32,13 @@ export default function (ctx, inject) {
   "localStorage": {
     "prefix": "auth."
   },
-  "defaultStrategy": "laravelSanctum"
+  "defaultStrategy": ""
 }
 
   // Create a new Auth instance
   const $auth = new Auth(ctx, options)
 
   // Register strategies
-  // laravelSanctum
-  $auth.registerStrategy('laravelSanctum', new CookieScheme($auth, {
-  "url": "http://localhost:8002",
-  "name": "laravelSanctum",
-  "cookie": {
-    "name": "XSRF-TOKEN"
-  },
-  "endpoints": {
-    "csrf": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8002/sanctum/csrf-cookie"
-    },
-    "login": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8002/login"
-    },
-    "logout": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8002/logout"
-    },
-    "user": {
-      "withCredentials": true,
-      "headers": {
-        "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      "url": "http://localhost:8002/api/user"
-    }
-  },
-  "user": {
-    "property": false
-  }
-}))
 
   // Inject it to nuxt context as $auth
   inject('auth', $auth)
