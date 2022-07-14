@@ -1,4 +1,4 @@
-# habit-tracker
+# Habicardo
 
 ## Build Setup
 
