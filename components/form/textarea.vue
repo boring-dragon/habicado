@@ -1,19 +1,35 @@
 <script>
 export default {
-  name: "FormTextarea",
   props: {
+    value: {
+      default: "",
+    },
+    label: String,
+    error: String,
+    required: {
+      default: "required",
+    },
     rows: {
-      type: Number,
-      default: 4,
+      default: "5",
     },
   },
+
   methods: {
-    handleInput(e) {
-      this.$emit("input", e.target.value);
+    focus() {
+      this.$refs.input.focus();
     },
   },
 };
 </script>
+
 <template>
-    <textarea @input="handleInput" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" :rows="rows"></textarea>
+	<div class="mb-4">
+		<label class="block text-sm font-medium text-gray-700" v-if="label">
+			<span>{{ label }}</span>
+		</label>
+		<textarea :rows="rows" :value="value" @input="$emit('input', $event.target.value)" class="w-full mt-1 form-input rounded-md shadow-sm sm:text-sm sm:leading-5" ref="input"></textarea>
+		<div v-if="error">
+			<p class="mt-2 text-sm text-red-600">{{ error }}</p>
+		</div>
+	</div>
 </template>

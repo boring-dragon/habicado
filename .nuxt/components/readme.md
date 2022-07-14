@@ -19,6 +19,7 @@ You can directly use them in pages and other components without the need to impo
 - `<FormCheckbox>` | `<form-checkbox>` (components/form/checkbox.vue)
 - `<FormInput>` | `<form-input>` (components/form/input.vue)
 - `<FormLabel>` | `<form-label>` (components/form/label.vue)
+- `<FormSelect>` | `<form-select>` (components/form/select.vue)
 - `<FormTextarea>` | `<form-textarea>` (components/form/textarea.vue)
 - `<FormToggle>` | `<form-toggle>` (components/form/toggle.vue)
 - `<FormValidationErrors>` | `<form-validation-errors>` (components/form/validation-errors.vue)

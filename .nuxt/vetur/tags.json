@@ -38,6 +38,9 @@
   "FormLabel": {
     "description": "Auto imported from components/form/label.vue"
   },
+  "FormSelect": {
+    "description": "Auto imported from components/form/select.vue"
+  },
   "FormTextarea": {
     "description": "Auto imported from components/form/textarea.vue"
   },
