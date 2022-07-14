@@ -11,6 +11,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Modal>` | `<modal>` (components/Modal.vue)
 - `<NavLink>` | `<nav-link>` (components/NavLink.vue)
 - `<UiApplicationLogo>` | `<ui-application-logo>` (components/ui/application-logo.vue)
+- `<UiBadge>` | `<ui-badge>` (components/ui/badge.vue)
 - `<UiDropdownButton>` | `<ui-dropdown-button>` (components/ui/dropdown-button.vue)
 - `<UiDropdown>` | `<ui-dropdown>` (components/ui/dropdown.vue)
 - `<UiNavLink>` | `<ui-nav-link>` (components/ui/nav-link.vue)

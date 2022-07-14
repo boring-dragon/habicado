@@ -3,6 +3,7 @@ export { default as ConfirmationModal } from '../../components/ConfirmationModal
 export { default as Modal } from '../../components/Modal.vue'
 export { default as NavLink } from '../../components/NavLink.vue'
 export { default as UiApplicationLogo } from '../../components/ui/application-logo.vue'
+export { default as UiBadge } from '../../components/ui/badge.vue'
 export { default as UiDropdownButton } from '../../components/ui/dropdown-button.vue'
 export { default as UiDropdown } from '../../components/ui/dropdown.vue'
 export { default as UiNavLink } from '../../components/ui/nav-link.vue'

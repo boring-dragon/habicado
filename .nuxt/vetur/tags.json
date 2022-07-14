@@ -14,6 +14,9 @@
   "UiApplicationLogo": {
     "description": "Auto imported from components/ui/application-logo.vue"
   },
+  "UiBadge": {
+    "description": "Auto imported from components/ui/badge.vue"
+  },
   "UiDropdownButton": {
     "description": "Auto imported from components/ui/dropdown-button.vue"
   },
