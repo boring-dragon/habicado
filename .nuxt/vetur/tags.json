@@ -1,27 +1,15 @@
 {
+  "BaseModal": {
+    "description": "Auto imported from components/BaseModal.vue"
+  },
+  "ConfirmationModal": {
+    "description": "Auto imported from components/ConfirmationModal.vue"
+  },
   "Modal": {
     "description": "Auto imported from components/Modal.vue"
   },
   "NavLink": {
     "description": "Auto imported from components/NavLink.vue"
-  },
-  "FormButton": {
-    "description": "Auto imported from components/form/button.vue"
-  },
-  "FormCheckbox": {
-    "description": "Auto imported from components/form/checkbox.vue"
-  },
-  "FormInput": {
-    "description": "Auto imported from components/form/input.vue"
-  },
-  "FormLabel": {
-    "description": "Auto imported from components/form/label.vue"
-  },
-  "FormToggle": {
-    "description": "Auto imported from components/form/toggle.vue"
-  },
-  "FormValidationErrors": {
-    "description": "Auto imported from components/form/validation-errors.vue"
   },
   "UiApplicationLogo": {
     "description": "Auto imported from components/ui/application-logo.vue"
@@ -37,5 +25,26 @@
   },
   "UiResponsiveNavLink": {
     "description": "Auto imported from components/ui/responsive-nav-link.vue"
+  },
+  "FormButton": {
+    "description": "Auto imported from components/form/button.vue"
+  },
+  "FormCheckbox": {
+    "description": "Auto imported from components/form/checkbox.vue"
+  },
+  "FormInput": {
+    "description": "Auto imported from components/form/input.vue"
+  },
+  "FormLabel": {
+    "description": "Auto imported from components/form/label.vue"
+  },
+  "FormTextarea": {
+    "description": "Auto imported from components/form/textarea.vue"
+  },
+  "FormToggle": {
+    "description": "Auto imported from components/form/toggle.vue"
+  },
+  "FormValidationErrors": {
+    "description": "Auto imported from components/form/validation-errors.vue"
   }
 }
