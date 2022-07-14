@@ -5,37 +5,37 @@
   "NavLink": {
     "description": "Auto imported from components/NavLink.vue"
   },
-  "AuthApplicationLogo": {
-    "description": "Auto imported from components/auth/application-logo.vue"
+  "FormButton": {
+    "description": "Auto imported from components/form/button.vue"
   },
-  "AuthButton": {
-    "description": "Auto imported from components/auth/button.vue"
+  "FormCheckbox": {
+    "description": "Auto imported from components/form/checkbox.vue"
   },
-  "AuthCheckbox": {
-    "description": "Auto imported from components/auth/checkbox.vue"
+  "FormInput": {
+    "description": "Auto imported from components/form/input.vue"
   },
-  "AuthDropdownButton": {
-    "description": "Auto imported from components/auth/dropdown-button.vue"
+  "FormLabel": {
+    "description": "Auto imported from components/form/label.vue"
   },
-  "AuthDropdown": {
-    "description": "Auto imported from components/auth/dropdown.vue"
+  "FormToggle": {
+    "description": "Auto imported from components/form/toggle.vue"
   },
-  "AuthInput": {
-    "description": "Auto imported from components/auth/input.vue"
+  "FormValidationErrors": {
+    "description": "Auto imported from components/form/validation-errors.vue"
   },
-  "AuthLabel": {
-    "description": "Auto imported from components/auth/label.vue"
+  "UiApplicationLogo": {
+    "description": "Auto imported from components/ui/application-logo.vue"
   },
-  "AuthNavLink": {
-    "description": "Auto imported from components/auth/nav-link.vue"
+  "UiDropdownButton": {
+    "description": "Auto imported from components/ui/dropdown-button.vue"
   },
-  "AuthResponsiveNavLink": {
-    "description": "Auto imported from components/auth/responsive-nav-link.vue"
+  "UiDropdown": {
+    "description": "Auto imported from components/ui/dropdown.vue"
   },
-  "AuthToggle": {
-    "description": "Auto imported from components/auth/toggle.vue"
+  "UiNavLink": {
+    "description": "Auto imported from components/ui/nav-link.vue"
   },
-  "AuthValidationErrors": {
-    "description": "Auto imported from components/auth/validation-errors.vue"
+  "UiResponsiveNavLink": {
+    "description": "Auto imported from components/ui/responsive-nav-link.vue"
   }
 }

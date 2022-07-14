@@ -1,5 +1,5 @@
 <script>
-import ApplicationLogo from '@/components/auth/application-logo.vue';
+import ApplicationLogo from '@/components/ui/application-logo.vue';
 
 export default {
     auth: 'guest',

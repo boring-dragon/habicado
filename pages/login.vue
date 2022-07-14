@@ -1,9 +1,9 @@
 <script>
-import BreezeValidationErrors from "@/components/auth/validation-errors.vue";
-import BreezeCheckbox from "@/components/auth/checkbox.vue";
-import BreezeButton from "@/components/auth/button.vue";
-import BreezeInput from "@/components/auth/input.vue";
-import BreezeLabel from "@/components/auth/label.vue";
+import FormValidationErrors from "@/components/form/validation-errors.vue";
+import FormCheckbox from "@/components/form/checkbox.vue";
+import FormButton from "@/components/form/button.vue";
+import FormInput from "@/components/form/input.vue";
+import FormLabel from "@/components/form/label.vue";
 export default {
   head: {
     title: "Login",
@@ -12,11 +12,11 @@ export default {
   layout: "guest",
 
   components: {
-    BreezeValidationErrors,
-    BreezeCheckbox,
-    BreezeButton,
-    BreezeInput,
-    BreezeLabel,
+    FormValidationErrors,
+    FormCheckbox,
+    FormButton,
+    FormInput,
+    FormLabel,
   },
 
   data() {
@@ -54,21 +54,21 @@ export default {
 <template>
 	<div>
 
-		<BreezeValidationErrors :errors="form.errors" class="mb-4" />
+		<FormValidationErrors :errors="form.errors" class="mb-4" />
 
 		<form @submit.prevent="submit">
 			<div>
-				<BreezeLabel for="email" value="Email" />
-				<BreezeInput autocomplete="username" autofocus class="mt-1 block w-full" id="email" placeholder="Your email.." required type="email" v-model="form.email" />
+				<FormLabel for="email" value="Email" />
+				<FormInput autocomplete="username" autofocus class="mt-1 block w-full" id="email" placeholder="Your email.." required type="email" v-model="form.email" />
 			</div>
 
 			<div class="mt-4">
-				<BreezeLabel for="password" value="Password" />
-				<BreezeInput autocomplete="current-password" class="mt-1 block w-full" id="password" placeholder="Your password.." required type="password" v-model="form.password" />
+				<FormLabel for="password" value="Password" />
+				<FormInput autocomplete="current-password" class="mt-1 block w-full" id="password" placeholder="Your password.." required type="password" v-model="form.password" />
 			</div>
 
 			<div class="flex items-center justify-center mt-4">
-				<BreezeButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing" class="ml-4">Log in</BreezeButton>
+				<FormButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing" class="ml-4">Log in</FormButton>
 			</div>
 		</form>
 	</div>
