@@ -11,24 +11,6 @@
   "NavLink": {
     "description": "Auto imported from components/NavLink.vue"
   },
-  "UiApplicationLogo": {
-    "description": "Auto imported from components/ui/application-logo.vue"
-  },
-  "UiBadge": {
-    "description": "Auto imported from components/ui/badge.vue"
-  },
-  "UiDropdownButton": {
-    "description": "Auto imported from components/ui/dropdown-button.vue"
-  },
-  "UiDropdown": {
-    "description": "Auto imported from components/ui/dropdown.vue"
-  },
-  "UiNavLink": {
-    "description": "Auto imported from components/ui/nav-link.vue"
-  },
-  "UiResponsiveNavLink": {
-    "description": "Auto imported from components/ui/responsive-nav-link.vue"
-  },
   "FormButton": {
     "description": "Auto imported from components/form/button.vue"
   },
@@ -52,5 +34,35 @@
   },
   "FormValidationErrors": {
     "description": "Auto imported from components/form/validation-errors.vue"
+  },
+  "UiApplicationLogo": {
+    "description": "Auto imported from components/ui/application-logo.vue"
+  },
+  "UiBadge": {
+    "description": "Auto imported from components/ui/badge.vue"
+  },
+  "UiCard": {
+    "description": "Auto imported from components/ui/card.vue"
+  },
+  "UiDropdownButton": {
+    "description": "Auto imported from components/ui/dropdown-button.vue"
+  },
+  "UiDropdown": {
+    "description": "Auto imported from components/ui/dropdown.vue"
+  },
+  "UiFormSectionTitle": {
+    "description": "Auto imported from components/ui/form-section-title.vue"
+  },
+  "UiFormSection": {
+    "description": "Auto imported from components/ui/form-section.vue"
+  },
+  "UiNavLink": {
+    "description": "Auto imported from components/ui/nav-link.vue"
+  },
+  "UiResponsiveNavLink": {
+    "description": "Auto imported from components/ui/responsive-nav-link.vue"
+  },
+  "UiSection": {
+    "description": "Auto imported from components/ui/section.vue"
   }
 }
