@@ -17,7 +17,7 @@ export default {
     parsedOptions() {
       if (isArray(this.options)) {
         return map(this.options, (option) => {
-          return { label: option, value: option };
+          return { label: option.label, value: option.value };
         });
       }
 

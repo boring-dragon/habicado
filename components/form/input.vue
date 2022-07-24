@@ -18,6 +18,7 @@ export default {
   props: {
     label: String,
     placeholder: String,
+    error: String,
   },
 
   methods: {

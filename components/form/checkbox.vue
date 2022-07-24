@@ -22,6 +22,7 @@ export default {
       default: null,
     },
      label: String,
+     error: String,
   },
   computed: {
     proxyChecked: {

@@ -21,6 +21,21 @@ export default {
             form_textarea: '',
             form_checkbox: false,
             form_toggle: false,
+            form_select: '',
+            options: [
+                {
+                    label: 'Option 1',
+                    value: 'option-1'
+                },
+                {
+                    label: 'Option 2',
+                    value: 'option-2'
+                },
+                {
+                    label: 'Option 3',
+                    value: 'option-3'
+                }
+            ]
         }
     }
 };
@@ -46,9 +61,14 @@ export default {
              <FormCheckBox v-model="form_checkbox" label="Check box label"></FormCheckBox>
         </div>
 
-            <div class="space-y-3">
+        <div class="space-y-3">
              <p class="text-sm text-gray-600">Toggle</p>
              <FormToggle v-model="form_toggle" label="Toggle label"></FormToggle>
+        </div>
+
+         <div class="space-y-3">
+             <p class="text-sm text-gray-600">Select</p>
+             <FormSelect v-model="form_select" :options="options" label="Select label"></FormSelect>
         </div>
        
 
