@@ -4,6 +4,7 @@ import FormTextArea from '@/components/form/textarea.vue';
 import FormCheckBox from "@/components/form/checkbox.vue";
 import FormToggle from "@/components/form/toggle.vue";
 import FormSelect from "@/components/form/select.vue";
+import FormDateInput from "@/components/form/date-input.vue";
 
 export default {
     layout: 'guest',
@@ -12,7 +13,9 @@ export default {
         FormInput,
         FormTextArea,
         FormCheckBox,
-        FormToggle
+        FormToggle,
+        FormSelect,
+        FormDateInput
     },
 
     data() {
@@ -22,6 +25,7 @@ export default {
             form_checkbox: false,
             form_toggle: false,
             form_select: '',
+            form_date: '',
             options: [
                 {
                     label: 'Option 1',
@@ -69,6 +73,11 @@ export default {
          <div class="space-y-3">
              <p class="text-sm text-gray-600">Select</p>
              <FormSelect v-model="form_select" :options="options" label="Select label"></FormSelect>
+        </div>
+
+           <div class="space-y-3">
+             <p class="text-sm text-gray-600">Date input</p>
+             <FormDateInput v-model="form_select"></FormDateInput>
         </div>
        
 

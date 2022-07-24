@@ -9,8 +9,7 @@
         <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
       </div>
       <flatpickr
-        class="block w-full pl-10 form-input sm:text-sm sm:leading-5"
-        :id="id"
+        class="block w-full pl-10 form-input sm:text-sm sm:leading-5 border-gray-300"
         :value="value"
         :config="options"
         v-on="$listeners"
@@ -32,12 +31,6 @@ import 'flatpickr/dist/flatpickr.css';
 
 export default {
   props: {
-    id: {
-      type: String,
-      default() {
-        return `text-input-${this._uid}`
-      },
-    },
     value: String,
     label: String,
     error: String,
