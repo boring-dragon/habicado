@@ -16,3 +16,12 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
+
+### TODO
+
+- [x] Design Character Profile Page
+- [x] Design and Fix Nav Menu
+- [ ] Design Settings Page
+- [ ] Design Inventory Page
+- [ ] Design Habbit List Cards
+- [ ] Design Habbit Creation Process
