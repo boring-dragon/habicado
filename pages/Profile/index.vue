@@ -10,16 +10,6 @@ export default {
     <div class="overflow-y-scroll max-w-screen-xl px-4 py-12 mx-auto space-y-8">
       
 
-        <center class="p-5 px-5 bg-secondary float-none rounded-xl">
-            <div class="w-8 h-8 bg-primary rounded-full"></div>
-            <p class="text-xs font-normal text-gray-500 mt-2">Character Profile</p>
-            <div class="flex gap-1 mt-5 w-full items-center">
-                <div class="w-1/3 h-18 bg-rose-600 rounded-lg p-3"></div>
-                <div class="w-1/3 h-18 bg-rose-600 rounded-lg p-3"></div>
-                <div class="w-1/3 h-18 bg-rose-600 rounded-lg p-3"></div>
-            </div>
-        </center>
-
 
         <CharacterProfileCard></CharacterProfileCard>
         

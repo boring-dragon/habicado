@@ -24,7 +24,7 @@ export default {
 				</div>
 			</div>
 			<section class="block fixed inset-x-0 bottom-0 z-10 bg-secondary rounded-t-[25px] shadow" v-if="$route.fullPath !== '/' && $route.fullPath !== '/register' && $route.fullPath !== '/login'">
-				<div class="relative z-0 flex border rounded-xl divide-x divide-primary overflow-hidden dark:border-gray-700 dark:divide-gray-700">
+				<div class="relative z-0 flex border rounded-3xl overflow-hidden dark:border-gray-700 dark:divide-gray-700">
 					<nav-link :active="$route.fullPath === '/home'" to="/home">
 						<template #icon>
 							<svg class="inline-block mb-1" fill="none" height="40" viewBox="0 0 24 24" width="40">
