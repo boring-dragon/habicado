@@ -5,6 +5,7 @@ import FormCheckBox from "@/components/form/checkbox.vue";
 import FormToggle from "@/components/form/toggle.vue";
 import FormSelect from "@/components/form/select.vue";
 import FormDateInput from "@/components/form/date-input.vue";
+import DarkModeToggle from "@/components/form/dark-mode-toggle.vue";
 
 export default {
     layout: 'guest',
@@ -15,7 +16,8 @@ export default {
         FormCheckBox,
         FormToggle,
         FormSelect,
-        FormDateInput
+        FormDateInput,
+        DarkModeToggle
     },
 
     data() {
@@ -50,6 +52,11 @@ export default {
 
     <div class="mt-8 space-y-3">
         <h6 class="text-md my-6">Form Components</h6>
+
+        <div class="space-y-3">
+             <p class="text-sm text-gray-600">Dark Mode toggle</p>
+             <DarkModeToggle></DarkModeToggle>
+        </div>
         <div class="space-y-3">
              <p class="text-sm text-gray-600">Inputs</p>
              <FormInput v-model="form_input" placeholder="Form Placeholder.."></FormInput>

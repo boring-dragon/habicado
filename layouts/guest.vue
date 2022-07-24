@@ -1,16 +1,20 @@
 <script>
 import ApplicationLogo from '@/components/ui/application-logo.vue';
+import { mapGetters } from 'vuex';
 
 export default {
     auth: 'guest',
 	components: {
 		ApplicationLogo
-	}
+	},
+     computed: {
+      ...mapGetters(['dark'])
+    }
 };
 </script>
 <template>
 	<div style="font-family: 'Poppins', sans-serif;" >
-	   <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+	   <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-black"  :class="dark ? 'dark' : 'light'">
         <div>
             <NuxtLink to="/">
                 <ApplicationLogo  />

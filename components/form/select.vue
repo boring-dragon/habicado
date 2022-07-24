@@ -47,7 +47,7 @@ export default {
 		<label class="block text-sm font-medium text-gray-700" v-if="label">
 			<span>{{ label }}</span>
 		</label>
-		<select @change="$emit('input', $event.target.value)" class="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 form-select leading-6 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5 rounded">
+		<select @change="$emit('input', $event.target.value)" class="py-3 px-4 pr-9 block w-full border-gray-200 rounded-md text-sm focus:border-secondary focus:ring-secondary dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400">
 			<option value></option>
 			<template v-for="option in parsedOptions">
 				<option :key="option.value" :selected="option.value == value" :value="option.value">{{ option.label }}</option>

@@ -12,6 +12,7 @@ You can directly use them in pages and other components without the need to impo
 - `<NavLink>` | `<nav-link>` (components/NavLink.vue)
 - `<FormButton>` | `<form-button>` (components/form/button.vue)
 - `<FormCheckbox>` | `<form-checkbox>` (components/form/checkbox.vue)
+- `<FormDarkModeToggle>` | `<form-dark-mode-toggle>` (components/form/dark-mode-toggle.vue)
 - `<FormDateInput>` | `<form-date-input>` (components/form/date-input.vue)
 - `<FormInput>` | `<form-input>` (components/form/input.vue)
 - `<FormLabel>` | `<form-label>` (components/form/label.vue)

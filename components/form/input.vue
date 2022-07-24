@@ -4,7 +4,7 @@
 			<span>{{ label }}</span>
 		</label>
 
-		<input :placeholder="placeholder" @input="handleInput" class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" type="text" />
+		<input :placeholder="placeholder" @input="handleInput" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-secondary focus:ring-secondary dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" type="text" />
 		<div v-if="error">
 			<p class="mt-2 text-sm text-red-600">{{ error }}</p>
 		</div>

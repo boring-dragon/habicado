@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-	<NuxtLink :class="active ? 'text-white bg-primary': 'text-primary'" class="w-full justify-center inline-block text-center pt-2 pb-1 rounded-lg" :to="to">
+	<NuxtLink :class="active ? 'text-white bg-primary': 'text-primary'" class="group relative min-w-0 flex-1 bg-secondary py-4 px-4 hover:text-white text-sm font-medium text-center overflow-hidden hover:bg-primary focus:z-10 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-400" :to="to">
 	
 		<slot name="icon"></slot>
 

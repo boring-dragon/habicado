@@ -17,6 +17,9 @@
   "FormCheckbox": {
     "description": "Auto imported from components/form/checkbox.vue"
   },
+  "FormDarkModeToggle": {
+    "description": "Auto imported from components/form/dark-mode-toggle.vue"
+  },
   "FormDateInput": {
     "description": "Auto imported from components/form/date-input.vue"
   },

@@ -28,7 +28,7 @@ export default {
 		<label class="block text-sm font-medium text-gray-700" v-if="label">
 			<span>{{ label }}</span>
 		</label>
-		<textarea :rows="rows" :placeholder="placeholder" :value="value" @input="$emit('input', $event.target.value)" class="w-full mt-1 form-input rounded-md shadow-sm sm:text-sm sm:leading-5" ref="input"></textarea>
+		<textarea :rows="rows" :placeholder="placeholder" :value="value" @input="$emit('input', $event.target.value)" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-secondary focus:ring-secondary dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" ref="input"></textarea>
 		<div v-if="error">
 			<p class="mt-2 text-sm text-red-600">{{ error }}</p>
 		</div>
