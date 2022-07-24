@@ -1,13 +1,14 @@
+<script>
+import CharacterProfileCard from './partials/CharacterProfileCard.vue';
+export default {
+    components: {
+        CharacterProfileCard
+    }
+};  
+</script>
 <template>
-    <div class="overflow-y-scroll h-[32rem] sm:h-full p-5 space-y-8">
-        <div class="flex justify-between items-center">
-            <div>
-                <p class="text-3xl text-slate-700 font-bold dark:text-white">Character Profile</p>
-            </div>
-            <div>
-                <div class="w-8 h-8 bg-secondary rounded-full"></div>
-            </div>
-        </div>
+    <div class="overflow-y-scroll max-w-screen-xl px-4 py-12 mx-auto space-y-8">
+      
 
         <center class="p-5 px-5 bg-secondary float-none rounded-xl">
             <div class="w-8 h-8 bg-primary rounded-full"></div>
@@ -18,6 +19,10 @@
                 <div class="w-1/3 h-18 bg-rose-600 rounded-lg p-3"></div>
             </div>
         </center>
+
+
+        <CharacterProfileCard></CharacterProfileCard>
+        
 
         <div class="flex justify-between items-center -mt-12">
             <svg class="inline-block mb-1 dark:text-white ml-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50"

@@ -56,6 +56,13 @@
     "_name": "_9bb9f0b2"
   },
   {
+    "name": "Profile-partials-CharacterProfileCard",
+    "path": "/Profile/partials/CharacterProfileCard",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Profile/partials/CharacterProfileCard.vue",
+    "chunkName": "pages/Profile/partials/CharacterProfileCard",
+    "_name": "_5f1be21f"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/index.vue",
