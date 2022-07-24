@@ -20,7 +20,7 @@ export default {
 </script>
 <template>
 	<section>
-		<div class="max-w-screen-xl px-4 py-32 mx-auto">
+		<div class="max-w-screen-xl px-4 py-12 mx-auto">
 			<div class="max-w-xl mx-auto text-center flex flex-col items-center">
 				<ApplicationLogo />
 
