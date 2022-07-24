@@ -49,6 +49,13 @@
     "_name": "_3d8abafe"
   },
   {
+    "name": "ui-components",
+    "path": "/ui-components",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/ui-components.vue",
+    "chunkName": "pages/ui-components",
+    "_name": "_9bb9f0b2"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/index.vue",

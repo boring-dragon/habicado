@@ -11,6 +11,7 @@ const _6e6a8e21 = () => interopDefault(import('../pages/login.vue' /* webpackChu
 const _48319a04 = () => interopDefault(import('../pages/Profile/index.vue' /* webpackChunkName: "pages/Profile/index" */))
 const _0042cb1b = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
 const _3d8abafe = () => interopDefault(import('../pages/Settings/index.vue' /* webpackChunkName: "pages/Settings/index" */))
+const _9bb9f0b2 = () => interopDefault(import('../pages/ui-components.vue' /* webpackChunkName: "pages/ui-components" */))
 const _b67a29ec = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -52,6 +53,10 @@ export const routerOptions = {
     path: "/Settings",
     component: _3d8abafe,
     name: "Settings"
+  }, {
+    path: "/ui-components",
+    component: _9bb9f0b2,
+    name: "ui-components"
   }, {
     path: "/",
     component: _b67a29ec,
