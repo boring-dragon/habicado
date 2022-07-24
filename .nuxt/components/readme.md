@@ -7,8 +7,7 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<BaseModal>` | `<base-modal>` (components/BaseModal.vue)
-- `<ConfirmationModal>` | `<confirmation-modal>` (components/ConfirmationModal.vue)
-- `<Modal>` | `<modal>` (components/Modal.vue)
+- `<DialogModal>` | `<dialog-modal>` (components/DialogModal.vue)
 - `<NavLink>` | `<nav-link>` (components/NavLink.vue)
 - `<FormButton>` | `<form-button>` (components/form/button.vue)
 - `<FormCheckbox>` | `<form-checkbox>` (components/form/checkbox.vue)

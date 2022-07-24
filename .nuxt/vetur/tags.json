@@ -2,11 +2,8 @@
   "BaseModal": {
     "description": "Auto imported from components/BaseModal.vue"
   },
-  "ConfirmationModal": {
-    "description": "Auto imported from components/ConfirmationModal.vue"
-  },
-  "Modal": {
-    "description": "Auto imported from components/Modal.vue"
+  "DialogModal": {
+    "description": "Auto imported from components/DialogModal.vue"
   },
   "NavLink": {
     "description": "Auto imported from components/NavLink.vue"

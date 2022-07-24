@@ -26,3 +26,5 @@ $ yarn generate
 - [ ] Design HomePage
 - [ ] Design Habbit List Cards
 - [ ] Design Habbit Creation Process
+- [x] Habbit Creation Modal Setup
+- [ ] Convert Habbit Creation Modal to Vuex

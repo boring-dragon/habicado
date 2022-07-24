@@ -1,5 +1,5 @@
 <template>
-	<teleport to="body">
+	<portal to="body">
 		<transition leave-active-class="duration-200">
 			<div class="fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50" scroll-region v-show="show">
 				<transition enter-active-class="ease-out duration-300" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="ease-in duration-200" leave-from-class="opacity-100" leave-to-class="opacity-0">
@@ -15,12 +15,17 @@
 				</transition>
 			</div>
 		</transition>
-	</teleport>
+	</portal>
 </template>
 
 <script>
+import PortalVue from 'portal-vue';
 export default {
   emits: ["close"],
+
+  components: {
+    PortalVue,
+  },
 
   props: {
     show: {
@@ -50,7 +55,7 @@ export default {
   mounted() {
     const close = () => {
       if (this.closeable) {
-        emit("close");
+        this.$emit("close");
       }
     };
     const closeOnEscape = (e) => {
@@ -70,7 +75,7 @@ export default {
   methods: {
     close() {
       if (this.closeable) {
-        emit("close");
+        this.$emit("close");
       }
     },
   },

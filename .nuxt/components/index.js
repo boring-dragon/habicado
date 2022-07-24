@@ -1,6 +1,5 @@
 export { default as BaseModal } from '../../components/BaseModal.vue'
-export { default as ConfirmationModal } from '../../components/ConfirmationModal.vue'
-export { default as Modal } from '../../components/Modal.vue'
+export { default as DialogModal } from '../../components/DialogModal.vue'
 export { default as NavLink } from '../../components/NavLink.vue'
 export { default as FormButton } from '../../components/form/button.vue'
 export { default as FormCheckbox } from '../../components/form/checkbox.vue'
