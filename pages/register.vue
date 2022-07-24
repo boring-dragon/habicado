@@ -1,7 +1,7 @@
 <script>
 import FormValidationErrors from "@/components/form/validation-errors.vue";
 import FormButton from "@/components/form/button.vue";
-import FormInput from "@/components/form/input.vue";
+import FormInput from "@/components/form/form-input.vue";
 import FormLabel from "@/components/form/label.vue";
 export default {
   head: {

@@ -1,5 +1,5 @@
 <script>
-import FormInput from '@/components/form/input.vue';
+import FormInput from '@/components/form/form-input.vue';
 import FormTextArea from '@/components/form/textarea.vue';
 import FormCheckBox from "@/components/form/checkbox.vue";
 import FormToggle from "@/components/form/toggle.vue";

@@ -2,7 +2,7 @@
 import FormValidationErrors from "@/components/form/validation-errors.vue";
 import FormCheckbox from "@/components/form/checkbox.vue";
 import FormButton from "@/components/form/button.vue";
-import FormInput from "@/components/form/input.vue";
+import FormInput from "@/components/form/form-input.vue";
 import FormLabel from "@/components/form/label.vue";
 export default {
   head: {
@@ -58,13 +58,12 @@ export default {
 
 		<form @submit.prevent="submit">
 			<div>
-				<FormLabel for="email" value="Email" />
-				<FormInput autocomplete="username" autofocus class="mt-1 block w-full" id="email" placeholder="Your email.." required type="email" v-model="form.email" />
+
+				<FormInput label="Email" placeholder="Your email.." v-model="form.email" required />
 			</div>
 
 			<div class="mt-4">
-				<FormLabel for="password" value="Password" />
-				<FormInput autocomplete="current-password" class="mt-1 block w-full" id="password" placeholder="Your password.." required type="password" v-model="form.password" />
+				<FormInput label="Password" autocomplete="current-password" class="mt-1 block w-full" id="password" placeholder="Your password.." required type="password" v-model="form.password" />
 			</div>
 
 			<div class="flex items-center justify-center mt-4">

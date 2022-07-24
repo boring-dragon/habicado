@@ -24,7 +24,7 @@
     "description": "Auto imported from components/form/date-input.vue"
   },
   "FormInput": {
-    "description": "Auto imported from components/form/input.vue"
+    "description": "Auto imported from components/form/form-input.vue"
   },
   "FormLabel": {
     "description": "Auto imported from components/form/label.vue"

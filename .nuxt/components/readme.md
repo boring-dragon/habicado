@@ -14,7 +14,7 @@ You can directly use them in pages and other components without the need to impo
 - `<FormCheckbox>` | `<form-checkbox>` (components/form/checkbox.vue)
 - `<FormDarkModeToggle>` | `<form-dark-mode-toggle>` (components/form/dark-mode-toggle.vue)
 - `<FormDateInput>` | `<form-date-input>` (components/form/date-input.vue)
-- `<FormInput>` | `<form-input>` (components/form/input.vue)
+- `<FormInput>` | `<form-input>` (components/form/form-input.vue)
 - `<FormLabel>` | `<form-label>` (components/form/label.vue)
 - `<FormSelect>` | `<form-select>` (components/form/select.vue)
 - `<FormTextarea>` | `<form-textarea>` (components/form/textarea.vue)
