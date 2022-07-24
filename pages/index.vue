@@ -11,17 +11,11 @@ export default {
   },
   data() {
     return {
-      anim: null, // for saving the reference to the animation
       lottieOptions: {
         animationData: flatten("#0D3440", animationData.default),
       },
     };
-  },
-  methods: {
-    handleAnimation: function (anim) {
-      this.anim = anim;
-    },
-  },
+  }
 };
 </script>
 <template>
@@ -30,7 +24,7 @@ export default {
 			<div class="max-w-xl mx-auto text-center flex flex-col items-center">
 				<ApplicationLogo />
 
-				<lottie :height="300" :width="300" :options="lottieOptions" v-on:animCreated="handleAnimation" />
+				<lottie :height="300" :width="300" :options="lottieOptions" />
 
 				<div class="space-y-8">
 					<h1 class="font-extrabold text-5xl text-primary">Welcome To</h1>
