@@ -17,7 +17,7 @@ export default {
 </script>
 <template>
 	<div class="dark:bg-gray-800" style="font-family: 'Poppins', sans-serif;">
-		<div class="w-full h-screen">
+		<div class="w-full h-screen bg-gray-50">
 			<div class="container mx-auto">
 				<div>
 					<Nuxt />

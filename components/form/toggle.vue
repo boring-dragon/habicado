@@ -15,7 +15,7 @@ export default {
 }
 </script>
 <template>
-  <div class="mb-4">
+  <div>
     <label class="block text-sm font-medium text-gray-700" v-if="label">
       <span>{{ label }}</span>
     </label>
