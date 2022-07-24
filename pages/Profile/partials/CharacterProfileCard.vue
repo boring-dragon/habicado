@@ -13,7 +13,7 @@
 					</svg>
 
 					<div class="sm:ml-3 mt-1.5 sm:mt-0">
-						<dt class="text-gray-500 font-semibold">Habbit Master</dt>
+						<dt class="text-gray-700 font-semibold">Habbit Master</dt>
 					</div>
 				</div>
 
@@ -27,7 +27,7 @@
 					</svg>
 
 					<div class="sm:ml-3 mt-1.5 sm:mt-0">
-						<dt class="text-gray-500 font-semibold">Habbit Snow</dt>
+						<dt class="text-gray-700 font-semibold">Habbit Snow</dt>
 					</div>
 				</div>
 			</dl>
