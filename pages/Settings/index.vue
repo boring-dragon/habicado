@@ -22,10 +22,11 @@ export default {
 };
 </script>
 <template>
-	<div class="overflow-y-scroll max-w-screen-xl px-4 py-12 mx-auto space-y-8">
+	<div class="overflow-y-scroll max-w-screen-xl px-4 py-12 mx-auto space-y-6">
 		<h2 class="text-4xl font-bold text-primary">Settings</h2>
+    
 
-		<div class="bg-white p-4 rounded-lg shadow-lg">
+		<div class="bg-white p-4 rounded-lg shadow-md">
 			<FormValidationErrors :errors="form.errors" class="mb-4" />
 
 			<h3 class="text-center text-xl font-semibold mb-6">Profile Informations</h3>
@@ -45,7 +46,7 @@ export default {
 			</form>
 		</div>
 
-		<div class="bg-white p-4 rounded-lg shadow-lg">
+		<div class="bg-white p-4 rounded-lg shadow-md">
 			<h3 class="text-center text-xl font-semibold mb-6">General Settings</h3>
 
 			<form class="px-4 space-y-6">
@@ -61,7 +62,7 @@ export default {
 			</form>
 		</div>
 
-		<div class="bg-white p-4 rounded-lg shadow-lg">
+		<div class="bg-white p-4 rounded-lg shadow-md">
 			<h3 class="text-center text-xl font-semibold mb-6">Danger Zone</h3>
 
 			<form class="px-6 space-y-6">

@@ -17,11 +17,11 @@ export default {
 				<div class="relative max-w-3xl mx-auto text-center">
 					<span class="absolute inset-x-0 h-px -translate-y-1/2 bg-black/10 top-1/2"></span>
 
-					<h2 class="relative inline-block px-4 text-2xl font-bold text-center bg-white">Shop</h2>
+					<h2 class="relative inline-block px-4 text-2xl font-bold text-center bg-gray-50">Shop</h2>
 				</div>
 
 				<div class="grid grid-cols-2 mt-8 gap-x-4 gap-y-8">
-					<a :key="test" class="relative block border border-gray-100" href="#" v-for="test in [1,2,3,4,5,6,7,8, 9, 10]">
+					<a :key="test" class="relative block border border-gray-100 bg-white rounded shadow-sm" href="#" v-for="test in [1,2,3,4,5,6,7,8, 9, 10]">
 						<img :src="`https://robohash.org/tes` + test" class="object-contain w-full h-56" loading="lazy" />
 
 						<div class="p-6">
