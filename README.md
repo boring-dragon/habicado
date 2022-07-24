@@ -21,7 +21,8 @@ $ yarn generate
 
 - [x] Design Character Profile Page
 - [x] Design and Fix Nav Menu
-- [ ] Design Settings Page
+- [x] Design Settings Page
 - [ ] Design Inventory Page
+- [ ] Design HomePage
 - [ ] Design Habbit List Cards
 - [ ] Design Habbit Creation Process
