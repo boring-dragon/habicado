@@ -23,7 +23,9 @@ export default {
 </script>
 <template>
 	<div class="overflow-y-scroll max-w-screen-xl px-4 py-12 mx-auto space-y-6">
-		<h2 class="text-4xl font-bold text-primary">Settings</h2>
+		<Portal to="header">
+			<h2 class="text-3xl font-bold text-primary">Settings</h2>
+		</Portal>
 
 		<div class="bg-white p-4 rounded-lg shadow-md">
 			<FormValidationErrors :errors="form.errors" class="mb-4" />

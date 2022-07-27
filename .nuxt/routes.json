@@ -3,70 +3,60 @@
     "name": "Habits",
     "path": "/Habits",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Habits/index.vue",
-    "chunkName": "pages/Habits/index",
-    "_name": "_4587e95a"
+    "chunkName": "pages/Habits/index"
   },
   {
     "name": "Home",
     "path": "/Home",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Home/index.vue",
-    "chunkName": "pages/Home/index",
-    "_name": "_14740e8c"
+    "chunkName": "pages/Home/index"
   },
   {
     "name": "Insights",
     "path": "/Insights",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Insights/index.vue",
-    "chunkName": "pages/Insights/index",
-    "_name": "_9dee1e94"
+    "chunkName": "pages/Insights/index"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_6e6a8e21"
+    "chunkName": "pages/login"
   },
   {
     "name": "Profile",
     "path": "/Profile",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Profile/index.vue",
-    "chunkName": "pages/Profile/index",
-    "_name": "_48319a04"
+    "chunkName": "pages/Profile/index"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/register.vue",
-    "chunkName": "pages/register",
-    "_name": "_0042cb1b"
+    "chunkName": "pages/register"
   },
   {
     "name": "Settings",
     "path": "/Settings",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Settings/index.vue",
-    "chunkName": "pages/Settings/index",
-    "_name": "_3d8abafe"
+    "chunkName": "pages/Settings/index"
   },
   {
     "name": "ui-components",
     "path": "/ui-components",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/ui-components.vue",
-    "chunkName": "pages/ui-components",
-    "_name": "_9bb9f0b2"
+    "chunkName": "pages/ui-components"
   },
   {
     "name": "Profile-partials-CharacterProfileCard",
     "path": "/Profile/partials/CharacterProfileCard",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Profile/partials/CharacterProfileCard.vue",
-    "chunkName": "pages/Profile/partials/CharacterProfileCard",
-    "_name": "_5f1be21f"
+    "chunkName": "pages/Profile/partials/CharacterProfileCard"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_b67a29ec"
+    "chunkName": "pages/index"
   }
 ]

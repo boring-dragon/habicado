@@ -7,23 +7,33 @@ export default {
   },
   data() {
     return {
-		openHabitCreation: false
+      openHabitCreation: false,
     };
   },
   methods: {
-	showHabbitCreation() {
-		this.openHabitCreation = true;
-	},
-	hideHabbitCreation() {
-		this.openHabitCreation = false;
-	}
-  }
+    showHabbitCreation() {
+      this.openHabitCreation = true;
+    },
+    hideHabbitCreation() {
+      this.openHabitCreation = false;
+    },
+  },
 };
 </script>
 <template>
 	<div class="dark:bg-gray-800" style="font-family: 'Poppins', sans-serif;">
 		<div class="w-full h-screen bg-gray-50">
-			<div class="container mx-auto">
+			<div class="container mx-auto py-4">
+				<div class="max-w-screen-xl px-4 py-6 flex items-center justify-between">
+					<div>
+						<PortalTarget name="header" />
+					</div>
+
+					<div>
+						<div class="w-8 h-8 bg-secondary rounded-full"></div>
+					</div>
+				</div>
+
 				<div>
 					<Nuxt />
 				</div>
@@ -60,7 +70,7 @@ export default {
 
 					<nav-link :active="$route.fullPath === '/Profile'" to="/Profile">
 						<template #icon>
-							<svg class="inline-block mb-1" fill="none" height="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg">
+							<svg class="inline-block mb-1" fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0" />
 							</svg>
 						</template>
@@ -83,14 +93,11 @@ export default {
 		</div>
 
 		<DialogModal :show="openHabitCreation" @close="hideHabbitCreation()">
-				<template #title>
-					<h2 class="text-md font-semibold text-gray-600 text-center">Habbit Creation</h2>
-				</template>
+			<template #title>
+				<h2 class="text-md font-semibold text-gray-600 text-center">Habbit Creation</h2>
+			</template>
 
-				<template #content>
-					
-				</template>
-			</DialogModal>
+			<template #content></template>
+		</DialogModal>
 	</div>
-	
 </template>

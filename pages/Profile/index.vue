@@ -8,8 +8,7 @@ export default {
 </script>
 <template>
 	<div class="overflow-y-scroll max-w-screen-xl px-4 py-12 mx-auto space-y-8">
-
-        <h2 class="text-4xl font-bold text-primary">Profile</h2>
+       
 		<CharacterProfileCard></CharacterProfileCard>
 
 		<section>
