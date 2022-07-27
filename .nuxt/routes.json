@@ -18,6 +18,12 @@
     "chunkName": "pages/Insights/index"
   },
   {
+    "name": "Inventory",
+    "path": "/Inventory",
+    "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/Inventory/index.vue",
+    "chunkName": "pages/Inventory/index"
+  },
+  {
     "name": "login",
     "path": "/login",
     "component": "/Users/boring-dragon/code/habitAndTaskTracker/pages/login.vue",

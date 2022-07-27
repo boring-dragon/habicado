@@ -7,8 +7,11 @@ export default {
 };
 </script>
 <template>
-	<div class="overflow-y-scroll max-w-screen-xl px-4 py-12 mx-auto space-y-8">
-       
+	<div class="overflow-y-scroll py-12 mx-auto space-y-8">
+		<Portal to="header">
+			<h2 class="text-3xl font-bold text-primary">Profile</h2>
+		</Portal>
+
 		<CharacterProfileCard></CharacterProfileCard>
 
 		<section>

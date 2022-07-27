@@ -7,6 +7,7 @@ export default {
   head: {
     title: "Register",
   },
+  auth: "guest",
 
   layout: "guest",
 
@@ -20,7 +21,8 @@ export default {
   data() {
     return {
       form: {
-        name: "",
+        first_name: "",
+        last_name: "",
         email: "",
         password: "",
         password_confirmation: "",
@@ -65,8 +67,13 @@ export default {
 
 		<form @submit.prevent="submit">
 			<div>
-				<FormLabel for="name" value="Name" />
-				<FormInput autocomplete="name" autofocus class="input mt-1 block w-full" id="name" required type="text" v-model="form.name" />
+				<FormLabel for="first_name" value="First Name" />
+				<FormInput autocomplete="first_name" autofocus class="input mt-1 block w-full" id="first_name" required type="text" v-model="form.first_name" />
+			</div>
+
+      <div class="mt-4">
+				<FormLabel for="last_name" value="Last Name" />
+				<FormInput autocomplete="last_name" autofocus class="input mt-1 block w-full" id="last_name" required type="text" v-model="form.last_name" />
 			</div>
 
 			<div class="mt-4">

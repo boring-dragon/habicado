@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _4587e95a = () => interopDefault(import('../pages/Habits/index.vue' /* webpackChunkName: "pages/Habits/index" */))
 const _14740e8c = () => interopDefault(import('../pages/Home/index.vue' /* webpackChunkName: "pages/Home/index" */))
 const _9dee1e94 = () => interopDefault(import('../pages/Insights/index.vue' /* webpackChunkName: "pages/Insights/index" */))
+const _7f057412 = () => interopDefault(import('../pages/Inventory/index.vue' /* webpackChunkName: "pages/Inventory/index" */))
 const _6e6a8e21 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
 const _48319a04 = () => interopDefault(import('../pages/Profile/index.vue' /* webpackChunkName: "pages/Profile/index" */))
 const _0042cb1b = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
@@ -38,6 +39,10 @@ export const routerOptions = {
     path: "/Insights",
     component: _9dee1e94,
     name: "Insights"
+  }, {
+    path: "/Inventory",
+    component: _7f057412,
+    name: "Inventory"
   }, {
     path: "/login",
     component: _6e6a8e21,
