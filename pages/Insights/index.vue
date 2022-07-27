@@ -1,140 +1,127 @@
-<script>
-/*
-	npm remove v-calender
-	npm i v-calendar@1.0.0-beta.22
-*/
-import Calendar from 'v-calendar/lib/components/calendar.umd'
-
-export default {
-	components: {
-		Calendar
-	},
-	data() {
-		const habits = {
-			basketball: [
-				{
-					description: 'Play basketball with Teh.',
-					isComplete: false,
-					dates: { weekdays: 6 },  // every friday
-					color: 'red',
-				},
-			],
-			football: [
-				{
-					description: 'Play football with Jinas.',
-					isComplete: false,
-					dates: { weekdays: 4 },  // every wednesday
-					color: 'blue',
-				},
-			]
-		}
-		return {
-			habits,
-			timezone: '',
-			selectedDate: {},
-			today: new Date(),
-			user: {
-				username: "Heesu Kim",
-			},
-		};
-	},
-	computed: {
-		// for popovers
-		attributes() {
-			return [
-				// Attributes for basketball
-				...this.habits.basketball.map(element => ({
-					dates: element.dates,
-					dot: {
-						color: element.color,
-						class: element.isComplete ? 'opacity-75' : '',
-					},
-					popover: {
-						label: element.description,
-						visibility: 'click'
-					},
-					customData: element,
-				})),
-				// Attributes for football
-				...this.habits.football.map(element => ({
-					dates: element.dates,
-					dot: {
-						color: element.color,
-						class: element.isComplete ? 'opacity-75' : '',
-					},
-					popover: {
-						label: element.description,
-						visibility: 'click'
-					},
-					customData: element,
-				})),
-			];
-		}
-	},
-	methods: {
-		dateFormating: function (type, date) {
-			var format = ""
-			if (type === 'ymd') {
-				format += this.today.getFullYear() + '-';
-			} else if (type === 'md' && date === 'tomorrow') {
-				this.today.setDate(this.today.getDate() + 1)
-			}
-			format += ((this.today.getMonth() + 1) > 9 ? '' : '0') + (this.today.getMonth() + 1) + '-' + (this.today.getDate() > 9 ? '' : '0') + this.today.getDate()
-			return format
-		}
-	}
-}
-</script>
 <template>
-	<div class="overflow-y-scroll h-[32rem] sm:h-full p-5 space-y-8">
-		<div>
-			<p class="text-3xl text-slate-700 font-bold dark:text-white">Insights</p>
-			<div class="flex items-center justify-between mt-5">
-				<p class="text-2xl text-slate-700 dark:text-white">{{ dateFormating('ymd', 'today') }}
-				</p>
-				<svg fill="none" height="24" viewBox="0 0 24 24" width="24" class="dark:text-white">
-					<path
-						d="M4.75 8.75C4.75 7.64543 5.64543 6.75 6.75 6.75H17.25C18.3546 6.75 19.25 7.64543 19.25 8.75V17.25C19.25 18.3546 18.3546 19.25 17.25 19.25H6.75C5.64543 19.25 4.75 18.3546 4.75 17.25V8.75Z"
-						stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-					<path d="M8 4.75V8.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-						stroke-width="1.5" />
-					<path d="M16 4.75V8.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-						stroke-width="1.5" />
-					<path d="M7.75 10.75H16.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-						stroke-width="1.5" />
+	<div class="max-w-screen-xl px-4 py-12 mx-auto">
+		<Portal to="header">
+			<h2 class="text-3xl font-bold text-primary">Insight</h2>
+		</Portal>
+		<div class="relative grid grid-cols-1 gap-x-14">
+			<button class="absolute -top-1 -left-1.5 flex items-center justify-center p-1.5 text-gray-400 hover:text-gray-500" type="button">
+				<span class="sr-only">Previous month</span>
+				<svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+					<path d="M13.25 8.75L9.75 12L13.25 15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
 				</svg>
-			</div>
+			</button>
+			<button class="absolute -top-1 -right-1.5 flex items-center justify-center p-1.5 text-gray-400 hover:text-gray-500" type="button">
+				<span class="sr-only">Next month</span>
 
-			<div class="flex items-center gap-2 mt-5">
-				<div class="w-32 h-18 bg-secondary rounded-lg p-3">
-					<div class="text-right text-slate-700">
-						{{ dateFormating('md', 'today') }}
-					</div>
+				<svg fill="none" height="24" viewBox="0 0 24 24" width="24">
+					<path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+				</svg>
+			</button>
+			<section :class="[monthIdx === months.length - 1 && 'block', 'text-center']" :key="monthIdx" v-for="(month, monthIdx) in months">
+				<h2 class="font-semibold text-gray-900">{{ month.name }}</h2>
+				<div class="mt-6 grid grid-cols-7 text-xs leading-6 text-gray-500">
+					<div>M</div>
+					<div>T</div>
+					<div>W</div>
+					<div>T</div>
+					<div>F</div>
+					<div>S</div>
+					<div>S</div>
 				</div>
-
-				<div class="w-32 h-18 bg-secondary rounded-lg p-3">
-					<div class="text-right text-slate-700">
-						{{ dateFormating('md', 'tomorrow') }}
-					</div>
+				<div class="isolate mt-2 grid grid-cols-7 gap-px rounded-lg bg-gray-200 text-sm shadow ring-1 ring-gray-200">
+					<button :class="[day.isCurrentMonth ? 'bg-white text-gray-900' : 'bg-gray-50 text-gray-400', dayIdx === 0 && 'rounded-tl-lg', dayIdx === 6 && 'rounded-tr-lg', dayIdx === month.days.length - 7 && 'rounded-bl-lg', dayIdx === month.days.length - 1 && 'rounded-br-lg', 'relative py-1.5 hover:bg-gray-100 focus:z-10']" :key="day.date" type="button" v-for="(day, dayIdx) in month.days">
+						<time :class="[day.isToday && 'bg-secondary font-semibold text-primary', 'mx-auto flex h-7 w-7 items-center justify-center rounded-full']" :datetime="day.date">{{ day.date.split('-').pop().replace(/^0/, '') }}</time>
+					</button>
 				</div>
-			</div>
+			</section>
 		</div>
-
-		<center class="bg-slate-700 rounded-xl p-5">
-			<Calendar :attributes='attributes' class="w-36" color="red" is-dark is-range></Calendar>
-		</center>
-
-		<div class="p-5 bg-secondary rounded-xl">
-			<div class="flex items-center justify-between">
-				<p>Your progress</p>
-				<p>60%</p>
-			</div>
-			<p>2 of 5 Completed</p>
-			<div class="bg-gray-200 rounded-full h-1.5 dark:bg-white-700 mt-2">
-				<div class="bg-gray-600 h-1.5 rounded-full dark:bg-grey-300"></div>
-			</div>
-		</div>
+		<section class="mt-12">
+			<h2 class="font-semibold text-gray-900">Habbits List</h2>
+			<ol class="mt-2 divide-y divide-gray-200 text-sm leading-6 text-gray-500">
+				<li class="py-4 sm:flex">
+					<time class="w-28 flex-none" datetime="2022-01-17">Wed, Jan 12</time>
+					<p class="mt-2 flex-auto sm:mt-0">Nothing on today’s schedule</p>
+				</li>
+				<li class="py-4 sm:flex">
+					<time class="w-28 flex-none" datetime="2022-01-19">Thu, Jan 13</time>
+					<p class="mt-2 flex-auto font-semibold text-gray-900 sm:mt-0">View house with real estate agent</p>
+					<p class="flex-none sm:ml-6">
+						<time datetime="2022-01-13T14:30">2:30 PM</time> -
+						<time datetime="2022-01-13T16:30">4:30 PM</time>
+					</p>
+				</li>
+				<li class="py-4 sm:flex">
+					<time class="w-28 flex-none" datetime="2022-01-20">Fri, Jan 14</time>
+					<p class="mt-2 flex-auto font-semibold text-gray-900 sm:mt-0">Meeting with bank manager</p>
+					<p class="flex-none sm:ml-6">All day</p>
+				</li>
+				<li class="py-4 sm:flex">
+					<time class="w-28 flex-none" datetime="2022-01-18">Mon, Jan 17</time>
+					<p class="mt-2 flex-auto font-semibold text-gray-900 sm:mt-0">Sign paperwork at lawyers</p>
+					<p class="flex-none sm:ml-6">
+						<time datetime="2022-01-17T10:00">10:00 AM</time> -
+						<time datetime="2022-01-17T10:15">10:15 AM</time>
+					</p>
+				</li>
+			</ol>
+		</section>
 	</div>
 </template>
 
-
+<script>
+export default {
+  data() {
+    return {
+      months: [
+        {
+          name: "January",
+          days: [
+            { date: "2021-12-27" },
+            { date: "2021-12-28" },
+            { date: "2021-12-29" },
+            { date: "2021-12-30" },
+            { date: "2021-12-31" },
+            { date: "2022-01-01", isCurrentMonth: true },
+            { date: "2022-01-02", isCurrentMonth: true },
+            { date: "2022-01-03", isCurrentMonth: true },
+            { date: "2022-01-04", isCurrentMonth: true },
+            { date: "2022-01-05", isCurrentMonth: true },
+            { date: "2022-01-06", isCurrentMonth: true },
+            { date: "2022-01-07", isCurrentMonth: true },
+            { date: "2022-01-08", isCurrentMonth: true },
+            { date: "2022-01-09", isCurrentMonth: true },
+            { date: "2022-01-10", isCurrentMonth: true },
+            { date: "2022-01-11", isCurrentMonth: true },
+            { date: "2022-01-12", isCurrentMonth: true, isToday: true },
+            { date: "2022-01-13", isCurrentMonth: true },
+            { date: "2022-01-14", isCurrentMonth: true },
+            { date: "2022-01-15", isCurrentMonth: true },
+            { date: "2022-01-16", isCurrentMonth: true },
+            { date: "2022-01-17", isCurrentMonth: true },
+            { date: "2022-01-18", isCurrentMonth: true },
+            { date: "2022-01-19", isCurrentMonth: true },
+            { date: "2022-01-20", isCurrentMonth: true },
+            { date: "2022-01-21", isCurrentMonth: true },
+            { date: "2022-01-22", isCurrentMonth: true },
+            { date: "2022-01-23", isCurrentMonth: true },
+            { date: "2022-01-24", isCurrentMonth: true },
+            { date: "2022-01-25", isCurrentMonth: true },
+            { date: "2022-01-26", isCurrentMonth: true },
+            { date: "2022-01-27", isCurrentMonth: true },
+            { date: "2022-01-28", isCurrentMonth: true },
+            { date: "2022-01-29", isCurrentMonth: true },
+            { date: "2022-01-30", isCurrentMonth: true },
+            { date: "2022-01-31", isCurrentMonth: true },
+            { date: "2022-02-01" },
+            { date: "2022-02-02" },
+            { date: "2022-02-03" },
+            { date: "2022-02-04" },
+            { date: "2022-02-05" },
+            { date: "2022-02-06" },
+          ],
+        },
+      ],
+    };
+  },
+};
+</script>
