@@ -1,9 +1,11 @@
 <script>
 import NavLink from "@/components/NavLink.vue";
+import DialogModal from "../components/DialogModal.vue";
 
 export default {
   components: {
     NavLink,
+	DialogModal
   },
   data() {
     return {
@@ -60,7 +62,7 @@ export default {
 						</template>
 					</nav-link>
 
-					<button @click="showHabbitCreation()" class="group relative min-w-0 flex-1 bg-secondary py-4 px-4 text-primary hover:text-white text-sm font-medium text-center overflow-hidden hover:bg-primary focus:z-10 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-400">
+					<button type="button" @click="showHabbitCreation()" class="group relative min-w-0 flex-1 bg-secondary py-4 px-4 text-primary hover:text-white text-sm font-medium text-center overflow-hidden hover:bg-primary focus:z-10 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-400">
 						<svg class="inline-block mb-1" fill="none" height="40" viewBox="0 0 24 24" width="40">
 							<path d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
 							<path d="M12 8.75003V15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />

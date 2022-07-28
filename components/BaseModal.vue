@@ -1,6 +1,5 @@
 <template>
-	<portal to="body">
-		<transition leave-active-class="duration-200">
+		<transition leave-active-class="duration-1000">
 			<div class="fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50" scroll-region v-show="show">
 				<transition enter-active-class="ease-out duration-300" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="ease-in duration-200" leave-from-class="opacity-100" leave-to-class="opacity-0">
 					<div @click="close" class="fixed inset-0 transform transition-all" v-show="show">
@@ -15,17 +14,11 @@
 				</transition>
 			</div>
 		</transition>
-	</portal>
 </template>
 
 <script>
-import PortalVue from 'portal-vue';
 export default {
   emits: ["close"],
-
-  components: {
-    PortalVue,
-  },
 
   props: {
     show: {
@@ -58,17 +51,9 @@ export default {
         this.$emit("close");
       }
     };
-    const closeOnEscape = (e) => {
-      if (e.key === "Escape" && this.show) {
-        close();
-      }
-    };
-
-    document.addEventListener("keydown", closeOnEscape);
   },
 
   destroyed() {
-    document.removeEventListener("keydown", closeOnEscape);
     document.body.style.overflow = null;
   },
 

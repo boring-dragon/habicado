@@ -22,7 +22,9 @@ $ yarn generate
 - [x] Design Character Profile Page
 - [x] Design and Fix Nav Menu
 - [x] Design Settings Page
-- [ ] Design Inventory Page
+- [x] Fix registeration and login flow
+- [x] Setup Login page
+- [x] Design Inventory Page
 - [ ] Design HomePage
 - [ ] Design Habbit List Cards
 - [ ] Design Habbit Creation Process

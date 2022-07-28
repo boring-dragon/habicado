@@ -2,6 +2,9 @@
 import FormButton from "@/components/form/button.vue";
 import FormInput from "@/components/form/form-input.vue";
 import FormToggle from "@/components/form/toggle.vue";
+
+const Cookie = require('js-cookie');
+
 export default {
   components: {
     FormButton,
@@ -18,6 +21,12 @@ export default {
         errors: [],
       },
     };
+  },
+
+  methods: {
+    logout() {
+      this.$auth.logout();
+    },
   },
 };
 </script>
@@ -42,7 +51,7 @@ export default {
 				</div>
 
 				<div class="flex items-center justify-center mt-4">
-					<FormButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing" class="ml-4">Log in</FormButton>
+					<FormButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing" class="ml-4">Save</FormButton>
 				</div>
 			</form>
 		</div>
@@ -66,11 +75,33 @@ export default {
 		<div class="bg-white p-4 rounded-lg shadow-md">
 			<h3 class="text-center text-xl font-semibold mb-6">Danger Zone</h3>
 
-			<form class="px-6 space-y-6">
-				<div class="flex items-center justify-center mt-4">
-					<FormButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing" variant="danger">Delete Account</FormButton>
+			<div class="space-y-6">
+				<div class="bg-white shadow-lg rounded-lg">
+					<div class="px-4 py-5 sm:p-6">
+						<h3 class="text-lg leading-6 font-medium text-gray-900">Logout From your account</h3>
+						<div class="mt-2 max-w-xl text-sm text-gray-500">
+							<p>Once you logout your account, your session will expire</p>
+						</div>
+						<div class="mt-5">
+							<form @submit.prevent="logout()">
+								<FormButton variant="secondary">Logout</FormButton>
+							</form>
+						</div>
+					</div>
 				</div>
-			</form>
+
+				<div class="bg-white shadow-lg rounded-lg">
+					<div class="px-4 py-5 sm:p-6">
+						<h3 class="text-lg leading-6 font-medium text-gray-900">Delete your account</h3>
+						<div class="mt-2 max-w-xl text-sm text-gray-500">
+							<p>Once you delete your account, you will lose all data associated with it.</p>
+						</div>
+						<div class="mt-5">
+							<button class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm" type="button">Delete account</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
