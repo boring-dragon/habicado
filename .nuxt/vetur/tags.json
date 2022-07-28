@@ -8,6 +8,36 @@
   "NavLink": {
     "description": "Auto imported from components/NavLink.vue"
   },
+  "FormButton": {
+    "description": "Auto imported from components/form/button.vue"
+  },
+  "FormCheckbox": {
+    "description": "Auto imported from components/form/checkbox.vue"
+  },
+  "FormDarkModeToggle": {
+    "description": "Auto imported from components/form/dark-mode-toggle.vue"
+  },
+  "FormDateInput": {
+    "description": "Auto imported from components/form/date-input.vue"
+  },
+  "FormInput": {
+    "description": "Auto imported from components/form/form-input.vue"
+  },
+  "FormLabel": {
+    "description": "Auto imported from components/form/label.vue"
+  },
+  "FormSelect": {
+    "description": "Auto imported from components/form/select.vue"
+  },
+  "FormTextarea": {
+    "description": "Auto imported from components/form/textarea.vue"
+  },
+  "FormToggle": {
+    "description": "Auto imported from components/form/toggle.vue"
+  },
+  "FormValidationErrors": {
+    "description": "Auto imported from components/form/validation-errors.vue"
+  },
   "UiApplicationLogo": {
     "description": "Auto imported from components/ui/application-logo.vue"
   },
@@ -40,35 +70,5 @@
   },
   "UiSection": {
     "description": "Auto imported from components/ui/section.vue"
-  },
-  "FormButton": {
-    "description": "Auto imported from components/form/button.vue"
-  },
-  "FormCheckbox": {
-    "description": "Auto imported from components/form/checkbox.vue"
-  },
-  "FormDarkModeToggle": {
-    "description": "Auto imported from components/form/dark-mode-toggle.vue"
-  },
-  "FormDateInput": {
-    "description": "Auto imported from components/form/date-input.vue"
-  },
-  "FormInput": {
-    "description": "Auto imported from components/form/form-input.vue"
-  },
-  "FormLabel": {
-    "description": "Auto imported from components/form/label.vue"
-  },
-  "FormSelect": {
-    "description": "Auto imported from components/form/select.vue"
-  },
-  "FormTextarea": {
-    "description": "Auto imported from components/form/textarea.vue"
-  },
-  "FormToggle": {
-    "description": "Auto imported from components/form/toggle.vue"
-  },
-  "FormValidationErrors": {
-    "description": "Auto imported from components/form/validation-errors.vue"
   }
 }

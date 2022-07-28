@@ -1,6 +1,7 @@
 <script>
 import FormButton from "@/components/form/button.vue";
 import FormInput from "@/components/form/form-input.vue";
+import FormTextarea from "@/components/form/textarea.vue";
 import FormToggle from "@/components/form/toggle.vue";
 
 const Cookie = require("js-cookie");
@@ -71,12 +72,12 @@ export default {
 					<FormInput label="First name" placeholder="Your first name.." required v-model="form.firstName" />
 				</div>
 
-				<div>
+				<div class="mt-4">
 					<FormInput label="Last name" placeholder="Your last name.." required v-model="form.lastName" />
 				</div>
 
 				<div class="mt-4">
-					<FormInput label="Bio" placeholder="Your bio.." required v-model="form.bio" />
+					<FormTextarea label="Bio" placeholder="Your bio.." required v-model="form.bio" />
 				</div>
 
 				<div class="mt-4">

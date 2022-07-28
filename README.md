@@ -26,7 +26,8 @@ $ yarn generate
 - [x] Setup Login page
 - [x] Design Inventory Page
 - [x] Design Mood Card ( Kim )
-- [ ] Connect Mood Card to API
+- [x] Connect Mood Card to API
+- [x] Create a wallet for user when they register
 - [ ] Design HomePage
 - [ ] Design Habbit List Cards
 - [ ] Design Habbit Creation Process
