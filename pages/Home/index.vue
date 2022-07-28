@@ -12,7 +12,7 @@
 			</div>
 
 			<div class="space-y-4 mt-4">
-				<button :key="mood" class="flex items-center w-full justify-center px-8 py-4 font-bold transition bg-secondary border-4 border-black rounded-xl focus:outline-none focus:ring shadow-[6px_6px_0_0_#000] hover:shadow-none active:bg-pink-50" href="/blog" v-for="mood in moods">
+				<button :key="mood.mood" class="flex items-center w-full justify-center px-8 py-4 font-bold transition bg-secondary border-4 border-black rounded-xl focus:outline-none focus:ring shadow-[6px_6px_0_0_#000] hover:shadow-none active:bg-pink-50" href="/blog" v-for="mood in moods">
 					<div class="flex items-center justify-center">
 						<img alt class="w-5 h-5" v-bind:src="mood.imgSrc" />
 						<p class="ml-3">{{ mood.mood }}</p>
@@ -130,5 +130,9 @@ export default {
       return i;
     },
   },
+
+  methods: {
+
+  }
 };
 </script>

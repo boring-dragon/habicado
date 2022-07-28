@@ -3,7 +3,7 @@ import FormButton from "@/components/form/button.vue";
 import FormInput from "@/components/form/form-input.vue";
 import FormToggle from "@/components/form/toggle.vue";
 
-const Cookie = require('js-cookie');
+const Cookie = require("js-cookie");
 
 export default {
   components: {
