@@ -41,7 +41,7 @@ export default {
     },
 
 	submit() {
-		this.$axios.post('/api/saveUserDetails', { 
+		this.$axios.put('/api/saveUserDetails', { 
 				first_name: this.form.firstName, 
 				last_name: this.form.lastName, 
 				bio: this.form.bio,
@@ -49,7 +49,7 @@ export default {
 				password: this.form.password
 			}
 		).then(response => {
-			alert(response.data.message)
+			//Alert success
 		})
 	}
   },
