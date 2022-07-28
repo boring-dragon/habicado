@@ -1,15 +1,35 @@
 <script>
 import NavLink from "@/components/NavLink.vue";
 import DialogModal from "../components/DialogModal.vue";
+import FormInput from "@/components/form/form-input.vue";
+import FormSelect from "@/components/form/select.vue";
+import FormCheckBox from "@/components/form/checkbox.vue";
 
 export default {
   components: {
     NavLink,
-	DialogModal
+    DialogModal,
+    FormInput,
+    FormSelect,
+    FormCheckBox,
   },
   data() {
     return {
       openHabitCreation: false,
+      options: [
+        {
+          label: "Option 1",
+          value: "option-1",
+        },
+        {
+          label: "Option 2",
+          value: "option-2",
+        },
+        {
+          label: "Option 3",
+          value: "option-3",
+        },
+      ],
     };
   },
   methods: {
@@ -32,8 +52,8 @@ export default {
 					</div>
 
 					<nuxt-link to="/profile">
-						<div class="w-8 h-8 bg-secondary rounded-full">
-							<img src="https://robohash.org/habicado" alt="Character">
+						<div class="w-16 h-16 rounded-full border border-primary hover:bg-secondary">
+							<img alt="Character" src="https://robohash.org/habicado" />
 						</div>
 					</nuxt-link>
 				</div>
@@ -64,7 +84,7 @@ export default {
 						</template>
 					</nav-link>
 
-					<button type="button" @click="showHabbitCreation()" class="group relative min-w-0 flex-1 bg-secondary py-4 px-4 text-primary hover:text-white text-sm font-medium text-center overflow-hidden hover:bg-primary focus:z-10 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-400">
+					<button @click="showHabbitCreation()" class="group relative min-w-0 flex-1 bg-secondary py-4 px-4 text-primary hover:text-white text-sm font-medium text-center overflow-hidden hover:bg-primary focus:z-10 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-400" type="button">
 						<svg class="inline-block mb-1" fill="none" height="40" viewBox="0 0 24 24" width="40">
 							<path d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
 							<path d="M12 8.75003V15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
@@ -101,7 +121,23 @@ export default {
 				<h2 class="text-md font-semibold text-gray-600 text-center">Habbit Creation</h2>
 			</template>
 
-			<template #content></template>
+			<template #content>
+				<div class="space-y-4">
+					<div>
+						<FormInput label="Habit Name" placeholder="Name of your habit.." required />
+					</div>
+					<div>
+						<FormSelect :options="options" label="Select Type"></FormSelect>
+					</div>
+				</div>
+			</template>
+
+			<template #footer>
+				<div class="flex items-center justify-between">
+					<FormButton class="ml-4">&#8249; Previous</FormButton>
+					<FormButton class="ml-4">Next &#8250;</FormButton>
+				</div>
+			</template>
 		</DialogModal>
 	</div>
 </template>

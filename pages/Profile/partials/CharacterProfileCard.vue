@@ -1,9 +1,9 @@
 <template>
-	<a class="p-4 rounded-lg shadow-sm shadow-indigo-100 bg-secondary flex flex-col justify-center items-center" href>
+	<a class="p-4 rounded-lg shadow-sm shadow-indigo-100 bg-primary flex flex-col justify-center items-center" href>
 		<img class="object-cover w-36 h-36 rounded-full border border-gray-600" src="https://robohash.org/habicado" />
 
 		<div class="mt-2">
-			<h2 class="font-medium text-2xl text-center">Mohamed Jinas</h2>
+			<h2 class="font-medium text-2xl text-center text-secondary">Mohamed Jinas</h2>
 
 			<dl class="flex items-center mt-6 space-x-8 text-sm">
 				<div class="inline-flex flex-col items-center">
@@ -13,7 +13,7 @@
 					</svg>
 
 					<div class="sm:ml-3 mt-1.5 sm:mt-0">
-						<dt class="text-gray-700 font-semibold">Habbit Master</dt>
+						<dt class="text-secondary font-semibold">Habbit Master</dt>
 					</div>
 				</div>
 
@@ -27,7 +27,7 @@
 					</svg>
 
 					<div class="sm:ml-3 mt-1.5 sm:mt-0">
-						<dt class="text-gray-700 font-semibold">Habbit Snow</dt>
+						<dt class="text-secondary font-semibold">Habbit Snow</dt>
 					</div>
 				</div>
 			</dl>

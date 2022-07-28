@@ -19,7 +19,7 @@ export default {
 				<div class="relative max-w-3xl mx-auto text-center">
 					<span class="absolute inset-x-0 h-px -translate-y-1/2 bg-black/10 top-1/2"></span>
 
-					<h2 class="relative inline-block px-4 text-2xl font-bold text-center bg-white">Shop</h2>
+					<h2 class="relative inline-block px-4 text-2xl font-bold text-center bg-gray-50">Shop</h2>
 				</div>
 
 				<div class="grid grid-cols-2 mt-8 gap-x-4 gap-y-8">
