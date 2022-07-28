@@ -18,10 +18,16 @@ export default {
         firstName: "",
 		lastName: "",
         email: "",
+		bio: "",
+		password: "",
         darkMode: false,
         errors: [],
       },
     };
+  },
+
+  mounted() {
+	this.getUserDetails()
   },
 
   methods: {
@@ -30,9 +36,27 @@ export default {
     },
 
 	submit() {
-		this.$axios.post('/api/saveUserDetails', { first_name: this.form.firstName, last_name: this.form.lastName, email: this.form.email }).then(response => {
+		this.$axios.post('/api/saveUserDetails', { 
+				first_name: this.form.firstName, 
+				last_name: this.form.lastName, 
+				bio: this.form.bio,
+				email: this.form.email,
+				password: this.form.password
+			}
+		).then(response => {
 			alert(response.data.message)
 		})
+	},
+
+	getUserDetails() {
+		this.$axios.get('/api/getUserDetails').then(response => {
+			console.log(response.data.data)
+			this.form.firstName = response.data.data.first_name
+			this.form.lastName = response.data.data.last_name
+			this.form.bio = response.data.data.bio
+			this.form.email = response.data.data.email
+			this.form.password = response.data.data.password
+		});
 	}
   },
 };
@@ -50,15 +74,23 @@ export default {
 
 			<form @submit.prevent="submit">
 				<div>
-					<FormInput label="Name" placeholder="Your first name.." required v-model="form.firstName" />
+					<FormInput label="First name" placeholder="Your first name.." required v-model="form.firstName" />
 				</div>
 
 				<div>
-					<FormInput label="Name" placeholder="Your last name.." required v-model="form.lastName" />
+					<FormInput label="Last name" placeholder="Your last name.." required v-model="form.lastName" />
+				</div>
+
+				<div class="mt-4">
+					<FormInput label="Bio" placeholder="Your bio.." required v-model="form.bio" />
 				</div>
 
 				<div class="mt-4">
 					<FormInput label="Email" placeholder="Your email.." required v-model="form.email" />
+				</div>
+
+				<div class="mt-4">
+					<FormInput label="Password" placeholder="Your password.." required v-model="form.password" />
 				</div>
 
 				<div class="flex items-center justify-center mt-4">
