@@ -4,7 +4,10 @@ import DialogModal from "../components/DialogModal.vue";
 import FormInput from "@/components/form/form-input.vue";
 import FormSelect from "@/components/form/select.vue";
 import FormCheckBox from "@/components/form/checkbox.vue";
+import FormTextarea from "@/components/form/textarea.vue";
+import FormDateInput from "@/components/form/date-input.vue";
 import { map } from "lodash";
+import Button from '../components/form/button.vue';
 
 export default {
   components: {
@@ -13,18 +16,30 @@ export default {
     FormInput,
     FormSelect,
     FormCheckBox,
+    FormTextarea,
+    FormDateInput,
+    Button,
   },
   data() {
     return {
       openHabitCreation: false,
       habbitTypes: [],
-	  walletBalance: 0,
+      walletBalance: 0,
+
+      form: {
+        name: "",
+        habbit_type_id: "",
+        description: "",
+        target_amount: null,
+        targeted_at: null,
+        errors: [],
+      },
     };
   },
 
   mounted() {
-	this.getWalletBalance();
-	this.getHabbitsTypes();
+    this.getWalletBalance();
+    this.getHabbitsTypes();
   },
   methods: {
     showHabbitCreation() {
@@ -34,14 +49,14 @@ export default {
       this.openHabitCreation = false;
     },
 
-	async getWalletBalance() {
-		try {
-			const response = await this.$axios.get("/api/getWalletBalance");
-			this.walletBalance = response.data.data.balance;
-		} catch (e) {
-			console.log(e);
-		}
-	},
+    async getWalletBalance() {
+      try {
+        const response = await this.$axios.get("/api/getWalletBalance");
+        this.walletBalance = response.data.data.balance;
+      } catch (e) {
+        console.log(e);
+      }
+    },
 
     async getHabbitsTypes() {
       this.$axios.get("/api/getHabbitTypes").then((response) => {
@@ -52,6 +67,27 @@ export default {
           };
         });
       });
+    },
+
+    async createHabbit() {
+      this.form.errors = [];
+      try {
+        await this.$axios.post("api/createHabbit", this.form);
+
+		this.hideHabbitCreation();
+
+		this.form.name = "";
+		this.form.habbit_type_id = "";
+		this.form.description = "";
+		this.form.target_amount = null;
+		this.form.targeted_at = null;
+      } catch (e) {
+        Object.keys(e.response.data.errors).forEach((key) => {
+          Object.values(e.response.data.errors[key]).forEach((error) => {
+            this.form.errors.push(error);
+          });
+        });
+      }
     },
   },
 };
@@ -67,7 +103,7 @@ export default {
 
 					<nuxt-link to="/profile">
 						<div class="w-16 h-16 rounded-full border border-primary hover:bg-secondary">
-							<img alt="Character" src="https://robohash.org/habicado" />
+							<img alt="Character" :src="$auth.user.character_img" />
 						</div>
 						<div class="inline-flex items-center gap-2 mt-4">
 							<svg class="w-8 h-8 text-yellow-400" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -76,6 +112,7 @@ export default {
 							</svg>
 
 							<span class="text-xl font-bold">{{ walletBalance }}</span>
+							<button @click.prevent="getWalletBalance()" class="text-sm underline">Refresh</button>
 						</div>
 					</nuxt-link>
 				</div>
@@ -144,20 +181,38 @@ export default {
 			</template>
 
 			<template #content>
+				<FormValidationErrors :errors="form.errors" class="mb-4" />
 				<div class="space-y-4">
 					<div>
-						<FormInput label="Habit Name" placeholder="Name of your habit.." required />
+						<FormInput label="Habit Name" placeholder="Name of your habit.." required v-model="form.name" />
 					</div>
 					<div>
-						<FormSelect :options="habbitTypes" label="Select Type"></FormSelect>
+						<FormSelect :options="habbitTypes" label="Select Type" v-model="form.habbit_type_id"></FormSelect>
+					</div>
+
+					<div>
+						<FormTextarea label="Habit Description" placeholder="Description.." required v-model="form.description" />
+					</div>
+
+					<div>
+						<FormInput label="Target Amount" placeholder="Set the amount of times you want to do this habit.." required type="number" v-model="form.target_amount" />
+					</div>
+
+					<div>
+						<FormDateInput label="Targeted Until" required v-model="form.targeted_at" />
 					</div>
 				</div>
 			</template>
 
 			<template #footer>
-				<div class="flex items-center justify-between">
-					<FormButton class="ml-4">&#8249; Previous</FormButton>
-					<FormButton class="ml-4">Next &#8250;</FormButton>
+				<div class="flex items-center gap-2">
+					<form @submit.prevent="hideHabbitCreation()">
+						<FormButton class="ml-4" variant="secondary">Cancel</FormButton>
+					</form>
+
+					<form @submit.prevent="createHabbit()">
+						<FormButton class="ml-4">Create</FormButton>
+					</form>
 				</div>
 			</template>
 		</DialogModal>

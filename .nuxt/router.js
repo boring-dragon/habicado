@@ -9,6 +9,7 @@ const _14740e8c = () => interopDefault(import('../pages/Home/index.vue' /* webpa
 const _9dee1e94 = () => interopDefault(import('../pages/Insights/index.vue' /* webpackChunkName: "pages/Insights/index" */))
 const _7f057412 = () => interopDefault(import('../pages/Inventory/index.vue' /* webpackChunkName: "pages/Inventory/index" */))
 const _6e6a8e21 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _776fbcf8 = () => interopDefault(import('../pages/MoodHistory/index.vue' /* webpackChunkName: "pages/MoodHistory/index" */))
 const _48319a04 = () => interopDefault(import('../pages/Profile/index.vue' /* webpackChunkName: "pages/Profile/index" */))
 const _0042cb1b = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
 const _3d8abafe = () => interopDefault(import('../pages/Settings/index.vue' /* webpackChunkName: "pages/Settings/index" */))
@@ -47,6 +48,10 @@ export const routerOptions = {
     path: "/login",
     component: _6e6a8e21,
     name: "login"
+  }, {
+    path: "/MoodHistory",
+    component: _776fbcf8,
+    name: "MoodHistory"
   }, {
     path: "/Profile",
     component: _48319a04,

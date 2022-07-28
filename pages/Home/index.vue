@@ -1,5 +1,5 @@
 <template>
-	<div class="h-[32rem] sm:h-full p-5 space-y-8">
+	<div class="h-full p-5 space-y-8 my-8">
 		<Portal to="header">
 			<h2 class="text-3xl font-bold text-primary">Welcome Back 👋</h2>
 			<p class="text-primary dark:text-white font-semibold">{{ $auth.user.full_name }}</p>
@@ -36,6 +36,24 @@
 			</div>
 		</div>
 
+		<div class="grid grid-cols-2 gap-2" v-if="counts">
+			<article class="p-6 bg-secondary border border-gray-800 rounded-lg">
+				<div>
+					<p class="text-sm text-primary">Completed Habits</p>
+
+					<p class="text-2xl font-medium text-primary">{{ counts.completed_habits }}</p>
+				</div>
+			</article>
+
+			<article class="p-6 bg-primary border border-gray-800 rounded-lg">
+				<div>
+					<p class="text-sm text-secondary">Pending Habits</p>
+
+					<p class="text-2xl font-medium text-secondary">{{ counts.pending_habits }}</p>
+				</div>
+			</article>
+		</div>
+
 		<div class="p-5 px-4">
 			<div>
 				<div class="flex items-center justify-between">
@@ -46,6 +64,13 @@
 			</div>
 
 			<ul class="space-y-6 mt-3">
+				<div v-if="habbits.length === 0">
+					<div class="relative p-8 text-center border border-gray-200 rounded-lg">
+						<h2 class="text-2xl font-medium">There's nothing here...</h2>
+
+						<p class="mt-4 text-sm text-gray-500">Created habits will appear here, try creating one!</p>
+					</div>
+				</div>
 				<li :key="habbit.id" v-for="habbit in habbits">
 					<div class="bg-slate-700 px-5 p-5 rounded-xl flex items-center justify-between">
 						<div>
@@ -53,15 +78,17 @@
 
 							<div class="text-lime-200 mt-2">{{ habbit.description }}</div>
 
-							<div class="text-gray-300 mt-2 text-sm" v-if="current_target_amount">
+							<div class="text-gray-300 mt-2 text-sm" v-if="habbit.target_amount">
 								<strong class="font-semibold">Target :</strong>
-								{{ current_target_amount }}/{{ target_amount }} times
+								{{ habbit.current_target_amount }}/{{ habbit.target_amount }} times
 							</div>
 						</div>
 
 						<div class="space-x-4 flex items-center">
-							<button class="inline-block px-5 py-3 text-primary transition bg-secondary rounded hover:scale-110 hover:rotate-2 active:bg-info focus:outline-none focus:ring font-bold text-2xl">+1</button>
-							<button class="inline-block px-4 py-3 text-primary transition bg-secondary rounded hover:scale-110 hover:rotate-2 active:bg-info focus:outline-none focus:ring font-bold text-2xl">
+							<button @click="decreaseHabbitTarget(habbit)" class="inline-block px-5 py-3 text-primary transition bg-secondary rounded hover:scale-110 hover:rotate-2 active:bg-info focus:outline-none focus:ring font-bold text-2xl" v-if="habbit.current_target_amount != 0">-1</button>
+							<button @click="updateHabbitTarget(habbit)" class="inline-block px-5 py-3 text-primary transition bg-secondary rounded hover:scale-110 hover:rotate-2 active:bg-info focus:outline-none focus:ring font-bold text-2xl" v-if="habbit.target_amount !== habbit.current_target_amount">+1</button>
+
+							<button @click="markHabbitAsCompleted(habbit)" class="inline-block px-4 py-3 text-primary transition bg-secondary rounded hover:scale-110 hover:rotate-2 active:bg-info focus:outline-none focus:ring font-bold text-2xl" v-if="habbit.target_amount === habbit.current_target_amount">
 								<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24">
 									<path d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
 									<path d="M9.75 12.75L10.1837 13.6744C10.5275 14.407 11.5536 14.4492 11.9564 13.7473L14.25 9.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
@@ -103,38 +130,21 @@ export default {
       moodChecked: false,
       habbits: [],
       habbitTypes: [],
+      counts: [],
     };
   },
   computed: {
-    completedTasks: function () {
-      let i = 0;
-      for (const [key, value] of Object.entries(this.user.tasks)) {
-        if (value.total === value.done) {
-          i++;
-        }
-      }
-      return i;
-    },
-
     getCurrentMood: function () {
       return this.moods.filter(
         (mood) => mood.mood === capitalize(this.$auth.user.current_mood)
       )[0];
     },
-
-    sortHabbitsByStatus: function () {
-      const sortedHabbits = [];
-      this.habbits.forEach((key) => {
-        if (key.status !== 0) {
-          sortedHabbits.push(key);
-        }
-      });
-      return sortedHabbits;
-    },
   },
 
   mounted() {
     this.checkIfMoodChecked();
+
+    this.getCounts();
   },
 
   beforeMount() {
@@ -147,6 +157,35 @@ export default {
         .post("/api/mood-checkings", { type: mood })
         .then((response) => {
           this.moodChecked = true;
+          this.$toast.success("Your Mood Checking is Updated!");
+        });
+    },
+
+    async updateHabbitTarget(habbit) {
+      this.$axios
+        .put(`/api/updateHabbitTarget/${habbit.id}`)
+        .then((response) => {
+          this.$toast.success("Habit Target Updated!");
+          this.getHabbits();
+        });
+    },
+
+    async decreaseHabbitTarget(habbit) {
+      this.$axios
+        .put(`/api/decreaseHabbitTarget/${habbit.id}`)
+        .then((response) => {
+          this.$toast.success("Habit Target Updated!");
+          this.getHabbits();
+        });
+    },
+
+    async markHabbitAsCompleted(habbit) {
+      this.$axios
+        .put(`/api/markHabbitAsCompleted/${habbit.id}`)
+        .then((response) => {
+          this.$toast.success("Habit Completed!");
+          this.getHabbits();
+          this.getCounts();
         });
     },
 
@@ -159,6 +198,12 @@ export default {
     async getHabbits() {
       this.$axios.get("/api/getHabbits").then((response) => {
         this.habbits = response.data.data;
+      });
+    },
+
+    async getCounts() {
+      this.$axios.get("/api/getCounts").then((response) => {
+        this.counts = response.data;
       });
     },
   },

@@ -22,6 +22,7 @@ export default {
         bio: "",
         password: "",
         darkMode: false,
+		notification: false,
         errors: [],
       },
     };
@@ -41,24 +42,33 @@ export default {
       this.$auth.logout();
     },
 
-	submit() {
-		this.$axios.put('/api/saveUserDetails', { 
-				first_name: this.form.firstName, 
-				last_name: this.form.lastName, 
-				bio: this.form.bio,
-				email: this.form.email,
-				password: this.form.password
-			}
-		).then(response => {
-			//Alert success
-		})
-	},
+    submit() {
+      this.form.errors = [];
+      this.$axios
+        .put("/api/saveUserDetails", {
+          first_name: this.form.firstName,
+          last_name: this.form.lastName,
+          bio: this.form.bio,
+          email: this.form.email,
+          password: this.form.password,
+        })
+        .then((response) => {
+          this.$toast.success("User Information Updated!");
+        })
+        .catch((e) => {
+          Object.keys(e.response.data.errors).forEach((key) => {
+            Object.values(e.response.data.errors[key]).forEach((error) => {
+              this.form.errors.push(error);
+            });
+          });
+        });
+    },
 
-	deleteAccount() {
-		this.$axios.delete('/api/deleteAccount').then(response => {
-			this.$auth.logout();
-		});
-	}
+    deleteAccount() {
+      this.$axios.delete("/api/deleteAccount").then((response) => {
+        this.$auth.logout();
+      });
+    },
   },
 };
 </script>
@@ -69,10 +79,9 @@ export default {
 		</Portal>
 
 		<div class="bg-white p-4 rounded-lg shadow-md">
-			<FormValidationErrors :errors="form.errors" class="mb-4" />
-
 			<h3 class="text-center text-xl font-semibold mb-6">Profile Informations</h3>
 
+			<FormValidationErrors :errors="form.errors" class="mb-4" />
 			<form @submit.prevent="submit">
 				<div>
 					<FormInput label="First name" placeholder="Your first name.." required v-model="form.firstName" />
@@ -111,7 +120,7 @@ export default {
 
 				<div class="flex items-center justify-between gap-2">
 					<label class="block text-sm font-medium text-gray-700">Notification</label>
-					<FormToggle v-model="form.darkMode"></FormToggle>
+					<FormToggle v-model="form.notification"></FormToggle>
 				</div>
 			</form>
 		</div>

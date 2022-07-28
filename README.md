@@ -28,12 +28,25 @@ $ yarn generate
 - [x] Design Mood Card ( Kim )
 - [x] Connect Mood Card to API
 - [x] Create a wallet for user when they register
-- [ ] Fix Bug in mood checking
-- [ ] Show Logged in User wallet balance
-- [ ] Ability to purchase characters from shop
-- [ ] Ability to change owned characters from inventory
-- [ ] Design HomePage
-- [ ] Design Habbit List Cards
-- [ ] Design Habbit Creation Process
+
+- [x] Show Logged in User wallet balance
+
+- [x] Design HomePage
+- [x] Design Habbit List Cards
+
 - [x] Habbit Creation Modal Setup
-- [ ] Convert Habbit Creation Modal to Vuex
+- [x] Account Deleting ( kim)
+- [x] Profile Information Update ( kim )
+
+- [x] Add Toast notifications
+- [x] Design Habbit Creation Process
+- [x] Ability to -1 a target count
+- [x] Ability to Mark the Habbit as Completed
+- [x] Show a Count Cards on Dashboard ( Completed and pending habits)
+- [x] Empty State for Habits listing
+- [x] Update wallet count refresh
+- [x] Ability to purchase characters from shop
+- [x] Load Inventory Dynamically
+- [ ] Ability to change owned characters from inventory
+- [ ] Make Insight Page Dynamic
+- [ ] Fix Bug in mood checking

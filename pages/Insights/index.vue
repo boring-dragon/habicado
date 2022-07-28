@@ -4,19 +4,8 @@
 			<h2 class="text-3xl font-bold text-primary">Insight</h2>
 		</Portal>
 		<div class="relative grid grid-cols-1 gap-x-14">
-			<button class="absolute -top-1 -left-1.5 flex items-center justify-center p-1.5 text-gray-400 hover:text-gray-500" type="button">
-				<span class="sr-only">Previous month</span>
-				<svg fill="none" height="24" viewBox="0 0 24 24" width="24">
-					<path d="M13.25 8.75L9.75 12L13.25 15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-				</svg>
-			</button>
-			<button class="absolute -top-1 -right-1.5 flex items-center justify-center p-1.5 text-gray-400 hover:text-gray-500" type="button">
-				<span class="sr-only">Next month</span>
-
-				<svg fill="none" height="24" viewBox="0 0 24 24" width="24">
-					<path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-				</svg>
-			</button>
+			
+			
 			<section :class="[monthIdx === months.length - 1 && 'block', 'text-center']" :key="monthIdx" v-for="(month, monthIdx) in months">
 				<h2 class="font-semibold text-gray-900">{{ month.name }}</h2>
 				<div class="mt-6 grid grid-cols-7 text-xs leading-6 text-gray-500">
@@ -74,7 +63,7 @@ export default {
     return {
       months: [
         {
-          name: "January",
+          name: new Date().toLocaleString('default', { month: 'long' }),
           days: [
             { date: "2021-12-27" },
             { date: "2021-12-28" },
@@ -123,5 +112,11 @@ export default {
       ],
     };
   },
+
+  methods: {
+	async getHabbits() {
+
+	}
+  }
 };
 </script>
