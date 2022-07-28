@@ -35,6 +35,29 @@
 				</button>
 			</div>
 		</div>
+
+		<div class="p-5 px-5 bg-yellow-200 float-none rounded-xl">
+			<div>
+				<div class="flex items-center justify-between">
+					<p class="font-semibold text-xl">Habbits</p>
+
+					<p class="font-semibold text-md underline">see all</p>
+				</div>
+			</div>
+
+			<div class="space-y-4 mt-4">
+				<button v-for="habbit in sortHabbitsByStatus" class="flex items-center justify-center px-8 py-4 font-bold transition bg-secondary border-4 border-black rounded-xl focus:outline-none focus:ring shadow-[6px_6px_0_0_#000] hover:shadow-none active:bg-pink-50">
+					<div v-for="habbitType in habbitTypes">
+						<p class="ml-3"> Name: {{ habbit.name }}</p>
+						<p class="ml-3" v-if="habbitType.id === habbit.habbit_type_id">Type: {{ habbitType.name }}</p>
+						<p class="ml-3" v-if="habbitType.id === habbit.habbit_type_id">Description: {{ habbitType.description }}</p>
+					</div>
+				</button>
+			</div>
+		</div>
+
+
+
 		<!---
 		<div class="p-5 px-5 bg-secondary float-none rounded-xl">
 			<div class="w-8 h-8 bg-primary rounded-full"></div>
@@ -111,6 +134,8 @@ export default {
         },
       ],
       moodChecked: false,
+	  habbits: [],
+	  habbitTypes: [],
     };
   },
   computed: {
@@ -129,10 +154,25 @@ export default {
         (mood) => mood.mood === capitalize(this.$auth.user.current_mood)
       )[0];
     },
+
+	sortHabbitsByStatus: function () {
+		const sortedHabbits = []
+		this.habbits.forEach(key=> {
+			if (key.status !== 0) {
+				sortedHabbits.push(key)
+			}
+		})
+		return sortedHabbits
+	}
   },
 
   mounted() {
     this.checkIfMoodChecked();
+  },
+
+  beforeMount() {
+	  this.getHabbits();
+	  this.getHabbitTypes();
   },
 
   methods: {
@@ -149,6 +189,19 @@ export default {
         this.moodChecked = response.data.moodChecked;
       });
     },
+
+	async getHabbits() {
+      this.$axios.get("/api/getHabbits").then((response) => {
+		this.habbits = response.data.data;
+      });
+    },
+
+	async getHabbitTypes() {
+      this.$axios.get("/api/getHabbitTypes").then((response) => {
+		this.habbitTypes = response.data.data;
+      });
+    },
+
   },
 };
 </script>
