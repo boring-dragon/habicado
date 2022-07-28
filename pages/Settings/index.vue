@@ -41,19 +41,24 @@ export default {
       this.$auth.logout();
     },
 
-    submit() {
-      this.$axios
-        .put("/api/saveUserDetails", {
-          first_name: this.form.firstName,
-          last_name: this.form.lastName,
-          bio: this.form.bio,
-          email: this.form.email,
-          password: this.form.password,
-        })
-        .then((response) => {
-          //Alert success
-        });
-    },
+	submit() {
+		this.$axios.put('/api/saveUserDetails', { 
+				first_name: this.form.firstName, 
+				last_name: this.form.lastName, 
+				bio: this.form.bio,
+				email: this.form.email,
+				password: this.form.password
+			}
+		).then(response => {
+			//Alert success
+		})
+	},
+
+	deleteAccount() {
+		this.$axios.delete('/api/deleteAccount').then(response => {
+			this.$auth.logout();
+		});
+	}
   },
 };
 </script>
@@ -136,7 +141,10 @@ export default {
 							<p>Once you delete your account, you will lose all data associated with it.</p>
 						</div>
 						<div class="mt-5">
-							<button class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm" type="button">Delete account</button>
+							<form @submit.prevent="deleteAccount()">
+								<FormButton class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm" variant="secondary">Delete account</FormButton>
+								<!-- <button class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm" type="button">Delete account</button> -->
+							</form>
 						</div>
 					</div>
 				</div>
