@@ -15,7 +15,8 @@ export default {
   data() {
     return {
       form: {
-        name: "",
+        firstName: "",
+		lastName: "",
         email: "",
         darkMode: false,
         errors: [],
@@ -27,9 +28,11 @@ export default {
     logout() {
       this.$auth.logout();
     },
-	save() {
-		alert(form.name)
-		alert(form.email)
+
+	submit() {
+		this.$axios.post('/api/saveUserDetails', { first_name: this.form.firstName, last_name: this.form.lastName, email: this.form.email }).then(response => {
+			alert(response.data.message)
+		})
 	}
   },
 };
@@ -45,9 +48,13 @@ export default {
 
 			<h3 class="text-center text-xl font-semibold mb-6">Profile Informations</h3>
 
-			<form @submit.prevent="save()">
+			<form @submit.prevent="submit">
 				<div>
-					<FormInput label="Name" placeholder="Your name.." required v-model="form.name" />
+					<FormInput label="Name" placeholder="Your first name.." required v-model="form.firstName" />
+				</div>
+
+				<div>
+					<FormInput label="Name" placeholder="Your last name.." required v-model="form.lastName" />
 				</div>
 
 				<div class="mt-4">
