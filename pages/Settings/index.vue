@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       form: {
-        firstName: "a",
+        firstName: "",
 		lastName: "",
         email: "",
 		bio: "",
