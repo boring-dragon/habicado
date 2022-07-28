@@ -116,13 +116,6 @@ export default {
 
   methods: {
     addMood(mood) {
-
-      this.$toast.show({
-        type: "success",
-        title: "Success",
-        message: "Your Mood Record Updated!",
-        timeout: 3,
-      });
     },
 
     async checkIfMoodChecked() {

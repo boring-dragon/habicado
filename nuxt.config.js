@@ -43,7 +43,7 @@ export default {
 	buildModules: ["@nuxt/postcss8", "@nuxtjs/google-fonts"],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: ["@nuxtjs/axios", "@nuxtjs/auth-next", "portal-vue/nuxt",  ['nuxt-tailvue', {toast: true}],],
+	modules: ["@nuxtjs/axios", "@nuxtjs/auth-next", "portal-vue/nuxt"],
 
 	axios: {
 		baseURL: process.env.NUXT_PUBLIC_BACKEND_URL,

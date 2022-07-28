@@ -18,12 +18,10 @@
     "lodash": "^4.17.21",
     "lottie-colorify": "^0.8.0",
     "nuxt": "^2.15.8",
-    "nuxt-tailvue": "^1.0.95",
     "portal-vue": "^2.1.7",
     "vue": "^2.6.14",
     "vue-flatpickr-component": "8.1.6",
     "vue-lottie": "^0.2.1",
-    "vue-notification": "^1.3.20",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
