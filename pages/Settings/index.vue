@@ -17,10 +17,10 @@ export default {
     return {
       form: {
         firstName: "",
-		lastName: "",
+        lastName: "",
         email: "",
-		bio: "",
-		password: "",
+        bio: "",
+        password: "",
         darkMode: false,
         errors: [],
       },
@@ -28,12 +28,12 @@ export default {
   },
 
   mounted() {
-	this.$axios.get('/api/getUserDetails').then(response => {
-			this.form.firstName = response.data.data.first_name
-			this.form.lastName = response.data.data.last_name
-			this.form.bio = response.data.data.bio
-			this.form.email = response.data.data.email
-		});
+    this.$axios.get("/api/getUserDetails").then((response) => {
+      this.form.firstName = response.data.data.first_name;
+      this.form.lastName = response.data.data.last_name;
+      this.form.bio = response.data.data.bio;
+      this.form.email = response.data.data.email;
+    });
   },
 
   methods: {
@@ -41,18 +41,19 @@ export default {
       this.$auth.logout();
     },
 
-	submit() {
-		this.$axios.put('/api/saveUserDetails', { 
-				first_name: this.form.firstName, 
-				last_name: this.form.lastName, 
-				bio: this.form.bio,
-				email: this.form.email,
-				password: this.form.password
-			}
-		).then(response => {
-			//Alert success
-		})
-	}
+    submit() {
+      this.$axios
+        .put("/api/saveUserDetails", {
+          first_name: this.form.firstName,
+          last_name: this.form.lastName,
+          bio: this.form.bio,
+          email: this.form.email,
+          password: this.form.password,
+        })
+        .then((response) => {
+          //Alert success
+        });
+    },
   },
 };
 </script>

@@ -21,7 +21,9 @@ export default {
       this.characters = response.data.data;
     },
 
-    async purchaseCharacter(character) {},
+    async purchaseCharacter(character) {
+		
+	},
   },
 };
 </script>
