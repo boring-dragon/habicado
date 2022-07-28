@@ -9,7 +9,7 @@
 			<div>
 				<p class="font-semibold text-xl">My Mood</p>
 				<p v-if="!moodChecked">What are your thoughts? What is your current mood?</p>
-        <p v-if="moodChecked">You have already taken your mood for today.</p>
+				<p v-if="moodChecked">You have already taken your mood for today.</p>
 			</div>
 
 			<div class="space-y-4 mt-4" v-if="!moodChecked">
@@ -115,7 +115,10 @@ export default {
   },
 
   methods: {
-    addMood(mood) {
+	  async addMood(mood) {
+		  this.$axios.post('/api/mood-checkings', { type: mood }).then(response => {
+			this.moodChecked = true;
+		})
     },
 
     async checkIfMoodChecked() {

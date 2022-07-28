@@ -4,17 +4,17 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _4587e95a = () => interopDefault(import('../pages/Habits/index.vue' /* webpackChunkName: "pages/Habits/index" */))
-const _14740e8c = () => interopDefault(import('../pages/Home/index.vue' /* webpackChunkName: "pages/Home/index" */))
-const _9dee1e94 = () => interopDefault(import('../pages/Insights/index.vue' /* webpackChunkName: "pages/Insights/index" */))
-const _7f057412 = () => interopDefault(import('../pages/Inventory/index.vue' /* webpackChunkName: "pages/Inventory/index" */))
-const _6e6a8e21 = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
-const _48319a04 = () => interopDefault(import('../pages/Profile/index.vue' /* webpackChunkName: "pages/Profile/index" */))
-const _0042cb1b = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
-const _3d8abafe = () => interopDefault(import('../pages/Settings/index.vue' /* webpackChunkName: "pages/Settings/index" */))
-const _9bb9f0b2 = () => interopDefault(import('../pages/ui-components.vue' /* webpackChunkName: "pages/ui-components" */))
-const _5f1be21f = () => interopDefault(import('../pages/Profile/partials/CharacterProfileCard.vue' /* webpackChunkName: "pages/Profile/partials/CharacterProfileCard" */))
-const _b67a29ec = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _9b324c06 = () => interopDefault(import('../pages/Habits/index.vue' /* webpackChunkName: "pages/Habits/index" */))
+const _05deb61d = () => interopDefault(import('../pages/Home/index.vue' /* webpackChunkName: "pages/Home/index" */))
+const _61ee4499 = () => interopDefault(import('../pages/Insights/index.vue' /* webpackChunkName: "pages/Insights/index" */))
+const _2c426e74 = () => interopDefault(import('../pages/Inventory/index.vue' /* webpackChunkName: "pages/Inventory/index" */))
+const _0b13bede = () => interopDefault(import('../pages/login.vue' /* webpackChunkName: "pages/login" */))
+const _7730bdc1 = () => interopDefault(import('../pages/Profile/index.vue' /* webpackChunkName: "pages/Profile/index" */))
+const _65bcf584 = () => interopDefault(import('../pages/register.vue' /* webpackChunkName: "pages/register" */))
+const _231fe23e = () => interopDefault(import('../pages/Settings/index.vue' /* webpackChunkName: "pages/Settings/index" */))
+const _3dbba938 = () => interopDefault(import('../pages/ui-components.vue' /* webpackChunkName: "pages/ui-components" */))
+const _734adedc = () => interopDefault(import('../pages/Profile/partials/CharacterProfileCard.vue' /* webpackChunkName: "pages/Profile/partials/CharacterProfileCard" */))
+const _416c1bc7 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -29,47 +29,47 @@ export const routerOptions = {
 
   routes: [{
     path: "/Habits",
-    component: _4587e95a,
+    component: _9b324c06,
     name: "Habits"
   }, {
     path: "/Home",
-    component: _14740e8c,
+    component: _05deb61d,
     name: "Home"
   }, {
     path: "/Insights",
-    component: _9dee1e94,
+    component: _61ee4499,
     name: "Insights"
   }, {
     path: "/Inventory",
-    component: _7f057412,
+    component: _2c426e74,
     name: "Inventory"
   }, {
     path: "/login",
-    component: _6e6a8e21,
+    component: _0b13bede,
     name: "login"
   }, {
     path: "/Profile",
-    component: _48319a04,
+    component: _7730bdc1,
     name: "Profile"
   }, {
     path: "/register",
-    component: _0042cb1b,
+    component: _65bcf584,
     name: "register"
   }, {
     path: "/Settings",
-    component: _3d8abafe,
+    component: _231fe23e,
     name: "Settings"
   }, {
     path: "/ui-components",
-    component: _9bb9f0b2,
+    component: _3dbba938,
     name: "ui-components"
   }, {
     path: "/Profile/partials/CharacterProfileCard",
-    component: _5f1be21f,
+    component: _734adedc,
     name: "Profile-partials-CharacterProfileCard"
   }, {
     path: "/",
-    component: _b67a29ec,
+    component: _416c1bc7,
     name: "index"
   }],
 

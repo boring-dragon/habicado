@@ -32,7 +32,9 @@ export default {
 					</div>
 
 					<nuxt-link to="/profile">
-						<div class="w-8 h-8 bg-secondary rounded-full"></div>
+						<div class="w-8 h-8 bg-secondary rounded-full">
+							<img src="https://robohash.org/habicado" alt="Character">
+						</div>
 					</nuxt-link>
 				</div>
 

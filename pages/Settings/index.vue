@@ -27,6 +27,10 @@ export default {
     logout() {
       this.$auth.logout();
     },
+	save() {
+		alert(form.name)
+		alert(form.email)
+	}
   },
 };
 </script>
@@ -41,7 +45,7 @@ export default {
 
 			<h3 class="text-center text-xl font-semibold mb-6">Profile Informations</h3>
 
-			<form @submit.prevent="submit">
+			<form @submit.prevent="save()">
 				<div>
 					<FormInput label="Name" placeholder="Your name.." required v-model="form.name" />
 				</div>
