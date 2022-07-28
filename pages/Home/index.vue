@@ -41,58 +41,37 @@
 				<div class="flex items-center justify-between">
 					<p class="font-semibold text-xl">Habits</p>
 
-					<p class="font-semibold text-md underline">see all</p>
+					<nuxt-link class="font-semibold text-md underline" to="/insights">see all</nuxt-link>
 				</div>
-			</div>
-		</div>
-
-		<!---
-		<div class="p-5 px-5 bg-secondary float-none rounded-xl">
-			<div class="w-8 h-8 bg-primary rounded-full"></div>
-			<p class="text-xs font-normal text-gray-500 mt-2">Character Profile</p>
-			<div class="mb-1 text-base font-medium dark:text-black">Health</div>
-			<div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-white-700">
-				<div :style="{ 'width': user.health + '%' }" class="bg-gray-600 h-1.5 rounded-full dark:bg-red-300"></div>
-			</div>
-			<div class="mb-1 text-base font-medium dark:text-black">Stamina</div>
-			<div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-white-700">
-				<div :style="{ 'width': user.stamina + '%' }" class="bg-gray-600 h-1.5 rounded-full dark:bg-blue-300"></div>
-			</div>
-			<div class="mb-1 text-base font-medium dark:text-black">Strength</div>
-			<div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-white-700">
-				<div :style="{ 'width': user.strength + '%' }" class="bg-gray-600 h-1.5 rounded-full dark:bg-grey-300"></div>
-			</div>
-		</div>
-
-		<div class="p-5 px-5 bg-secondary mt-3 rounded-xl space-y-2">
-			<div class="flex items-center justify-between">
-				<p>Your progress</p>
-				<p>{{ parseInt(completedTasks/Object.keys(user.tasks).length*100) }}%</p>
-			</div>
-			<div>
-				<p>{{ completedTasks }} of {{ Object.keys(user.tasks).length }} Completed</p>
-				<div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-white-700">
-					<div :style="{ 'width': completedTasks/Object.keys(user.tasks).length*100 + '%' }" class="bg-gray-600 h-1.5 rounded-full dark:bg-grey-300"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="mt-3">
-			<div class="flex items-center justify-between">
-				<p class="text-sm text-gray-700 dark:text-white">All Habits</p>
-				<p class="text-sm text-gray-700 dark:text-white">see all</p>
 			</div>
 
 			<ul class="space-y-6 mt-3">
-				<li :key="item.id" v-for="item in user.tasks">
-					<div class="bg-slate-700 px-5 p-5 rounded-xl">
-						<p class="text-white">{{ item.name }}</p>
-						<p class="text-secondary">{{ item.done }} of {{ item.total }} completed</p>
+				<li :key="habbit.id" v-for="habbit in habbits">
+					<div class="bg-slate-700 px-5 p-5 rounded-xl flex items-center justify-between">
+						<div>
+							<p class="text-white text-xl font-semibold">{{ habbit.name }}</p>
+
+							<div class="text-lime-200 mt-2">{{ habbit.description }}</div>
+
+							<div class="text-gray-300 mt-2 text-sm" v-if="current_target_amount">
+								<strong class="font-semibold">Target :</strong>
+								{{ current_target_amount }}/{{ target_amount }} times
+							</div>
+						</div>
+
+						<div class="space-x-4 flex items-center">
+							<button class="inline-block px-5 py-3 text-primary transition bg-secondary rounded hover:scale-110 hover:rotate-2 active:bg-info focus:outline-none focus:ring font-bold text-2xl">+1</button>
+							<button class="inline-block px-4 py-3 text-primary transition bg-secondary rounded hover:scale-110 hover:rotate-2 active:bg-info focus:outline-none focus:ring font-bold text-2xl">
+								<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24">
+									<path d="M4.75 12C4.75 7.99594 7.99594 4.75 12 4.75V4.75C16.0041 4.75 19.25 7.99594 19.25 12V12C19.25 16.0041 16.0041 19.25 12 19.25V19.25C7.99594 19.25 4.75 16.0041 4.75 12V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+									<path d="M9.75 12.75L10.1837 13.6744C10.5275 14.407 11.5536 14.4492 11.9564 13.7473L14.25 9.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								</svg>
+							</button>
+						</div>
 					</div>
 				</li>
 			</ul>
 		</div>
-		-->
 	</div>
 </template>
 
