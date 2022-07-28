@@ -183,7 +183,11 @@ export default {
       this.$axios
         .put(`/api/markHabbitAsCompleted/${habbit.id}`)
         .then((response) => {
-          this.$toast.success("Habit Completed!");
+          this.$toast.success("Habit Completed & You are rewarded 8 points!");
+          this.$confetti.start();
+          setTimeout(() => {
+            this.$confetti.stop();
+          }, 3000);
           this.getHabbits();
           this.getCounts();
         });

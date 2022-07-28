@@ -17,6 +17,7 @@ import nuxt_plugin_plugin_21b0f73e from 'nuxt_plugin_plugin_21b0f73e' // Source:
 import nuxt_plugin_portalvue_c0245d02 from 'nuxt_plugin_portalvue_c0245d02' // Source: ./portal-vue.js (mode: 'all')
 import nuxt_plugin_axios_370d8f54 from 'nuxt_plugin_axios_370d8f54' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_vuetoastnotification_168bdc6e from 'nuxt_plugin_vuetoastnotification_168bdc6e' // Source: ../plugins/vue-toast-notification.js (mode: 'client')
+import nuxt_plugin_vueconfetti_b3ca1f1c from 'nuxt_plugin_vueconfetti_b3ca1f1c' // Source: ../plugins/vue-confetti.js (mode: 'client')
 import nuxt_plugin_auth_16064148 from 'nuxt_plugin_auth_16064148' // Source: ./auth.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -225,6 +226,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_vuetoastnotification_168bdc6e === 'function') {
     await nuxt_plugin_vuetoastnotification_168bdc6e(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_vueconfetti_b3ca1f1c === 'function') {
+    await nuxt_plugin_vueconfetti_b3ca1f1c(app.context, inject)
   }
 
   if (typeof nuxt_plugin_auth_16064148 === 'function') {

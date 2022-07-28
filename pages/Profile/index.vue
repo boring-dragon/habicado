@@ -27,7 +27,7 @@ export default {
 		 this.$toast.success("Character Purchased & Wallet amount deducted!");
         this.fetchCharacters();
       } catch (e) {
-		console.log(e)
+		this.$toast.error("Not Enough Balance in Wallet!");
 	  }
     },
   },
@@ -64,7 +64,7 @@ export default {
 
 							<p class="text-md text-gray-600">Race: {{ character.race }}</p>
 
-							<button @click="purchaseCharacter(character)" class="flex items-center justify-center w-full px-2 py-4 mt-4 bg-primary text-white rounded" name="add" type="button">
+							<button @click.prevent="purchaseCharacter(character)" class="flex items-center justify-center w-full px-2 py-4 mt-4 bg-primary text-white rounded" name="add" type="button">
 								<span class="text-sm font-medium">Purchase</span>
 
 								<svg class="w-5 h-5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

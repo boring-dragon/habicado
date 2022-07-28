@@ -27,7 +27,7 @@
 					</svg>
 
 					<div class="sm:ml-3 mt-1.5 sm:mt-0">
-						<dt class="text-secondary font-semibold">Habit Snow</dt>
+						<dt class="text-secondary font-semibold">Character Master</dt>
 					</div>
 				</div>
 			</dl>

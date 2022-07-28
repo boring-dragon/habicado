@@ -47,6 +47,9 @@ $ yarn generate
 - [x] Update wallet count refresh
 - [x] Ability to purchase characters from shop
 - [x] Load Inventory Dynamically
-- [ ] Ability to change owned characters from inventory
+- [x] Ability to change owned characters from inventory
+- [x] Add Points to Wallet when habit is completed
+- [x] Show a Pretty Confetti Animation when the habit is completed
+- [x] Show currently Active Character
 - [ ] Make Insight Page Dynamic
 - [ ] Fix Bug in mood checking

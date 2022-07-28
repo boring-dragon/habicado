@@ -21,6 +21,16 @@ export default {
         console.log(e);
       }
     },
+
+    async changeCharacter(character) {
+      try {
+        await this.$axios.post(`/api/changeCharacter/${character.id}`);
+        this.$toast.success("Character Changed!");
+      } catch (e) {
+        console.log(e);
+        this.$toast.error("Error Occured While changing character");
+      }
+    },
   },
 };
 </script>
@@ -46,6 +56,13 @@ export default {
 					<h2 class="relative inline-block px-4 text-2xl font-bold text-center bg-gray-50">Inventory</h2>
 				</div>
 
+				<div class="mt-8" v-if="inventoryItems.length === 0">
+					<div class="relative p-8 text-center border border-gray-200 rounded-lg">
+						<h2 class="text-2xl font-medium">There's nothing here...</h2>
+
+						<p class="mt-4 text-sm text-gray-500">Characters added to inventory will appear here, try adding one!</p>
+					</div>
+				</div>
 				<div class="grid grid-cols-2 mt-8 gap-x-4 gap-y-8">
 					<a :key="inventoryItem.id" class="relative block border border-gray-100 bg-white rounded shadow-sm" href="#" v-for="inventoryItem in inventoryItems">
 						<img :src="inventoryItem.character_img" class="object-contain w-full h-56" loading="lazy" />
@@ -60,8 +77,8 @@ export default {
 							</h5>
 
 							<p class="text-md text-gray-600">Race: {{ inventoryItem.race }}</p>
-							<button class="flex items-center justify-center w-full px-2 py-4 mt-4 bg-primary text-white rounded" name="add" type="button">
-								<span class="text-sm font-medium">Change</span>
+							<button :disabled="$auth.user.character_id === inventoryItem.id" @click="changeCharacter(inventoryItem)" class="flex items-center justify-center w-full px-2 py-4 mt-4 bg-primary text-white rounded" name="add" type="button">
+								<span class="text-sm font-medium">{{ $auth.user.character_id === inventoryItem.id ? 'Selected' : 'Change' }}</span>
 
 								<svg class="w-5 h-5 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 									<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />

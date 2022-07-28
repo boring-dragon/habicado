@@ -9028,6 +9028,11 @@
   "resolved" "https://registry.npmjs.org/vue-client-only/-/vue-client-only-2.1.0.tgz"
   "version" "2.1.0"
 
+"vue-confetti@^2.3.0":
+  "integrity" "sha512-zmPniVzBKv0ie/BEXBR6Isi08hYSd6lS18b8VduG5BzZ2tv6bO/rlwISg+IpGY2XsqAFTXFdTC28YR+UPocnAw=="
+  "resolved" "https://registry.npmjs.org/vue-confetti/-/vue-confetti-2.3.0.tgz"
+  "version" "2.3.0"
+
 "vue-flatpickr-component@8.1.6":
   "integrity" "sha512-RUu/M/1lbuzQT+U3yP7O5/M2EIizr9vXLXqSc1eFOvCT3AHurQg8+iO02rjW+2l78Kit8pCNAUvHw7eexws6hw=="
   "resolved" "https://registry.npmjs.org/vue-flatpickr-component/-/vue-flatpickr-component-8.1.6.tgz"
