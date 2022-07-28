@@ -44,8 +44,6 @@
 					<p class="font-semibold text-md underline">see all</p>
 				</div>
 			</div>
-
-
 		</div>
 
 		<!---
@@ -183,7 +181,7 @@ export default {
       this.$axios.get("/api/getHabbits").then((response) => {
         this.habbits = response.data.data;
       });
-    }
+    },
   },
 };
 </script>

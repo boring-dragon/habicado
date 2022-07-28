@@ -4,6 +4,7 @@ import DialogModal from "../components/DialogModal.vue";
 import FormInput from "@/components/form/form-input.vue";
 import FormSelect from "@/components/form/select.vue";
 import FormCheckBox from "@/components/form/checkbox.vue";
+import { map } from "lodash";
 
 export default {
   components: {
@@ -16,21 +17,14 @@ export default {
   data() {
     return {
       openHabitCreation: false,
-      options: [
-        {
-          label: "Option 1",
-          value: "option-1",
-        },
-        {
-          label: "Option 2",
-          value: "option-2",
-        },
-        {
-          label: "Option 3",
-          value: "option-3",
-        },
-      ],
+      habbitTypes: [],
+	  walletBalance: 0,
     };
+  },
+
+  mounted() {
+	this.getWalletBalance();
+	this.getHabbitsTypes();
   },
   methods: {
     showHabbitCreation() {
@@ -38,6 +32,26 @@ export default {
     },
     hideHabbitCreation() {
       this.openHabitCreation = false;
+    },
+
+	async getWalletBalance() {
+		try {
+			const response = await this.$axios.get("/api/getWalletBalance");
+			this.walletBalance = response.data.data.balance;
+		} catch (e) {
+			console.log(e);
+		}
+	},
+
+    async getHabbitsTypes() {
+      this.$axios.get("/api/getHabbitTypes").then((response) => {
+        this.habbitTypes = map(response.data.data, function (habbitType) {
+          return {
+            label: habbitType.name,
+            value: habbitType.id,
+          };
+        });
+      });
     },
   },
 };
@@ -54,6 +68,14 @@ export default {
 					<nuxt-link to="/profile">
 						<div class="w-16 h-16 rounded-full border border-primary hover:bg-secondary">
 							<img alt="Character" src="https://robohash.org/habicado" />
+						</div>
+						<div class="inline-flex items-center gap-2 mt-4">
+							<svg class="w-8 h-8 text-yellow-400" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.75 9.25V6.5M19.25 6.5V10.5C19.25 10.9324 18.7796 11.3281 18 11.6335M19.25 6.5C19.25 7.4665 16.8995 8.25 14 8.25C11.1005 8.25 8.75 7.4665 8.75 6.5M19.25 6.5C19.25 5.5335 16.8995 4.75 14 4.75C11.1005 4.75 8.75 5.5335 8.75 6.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+								<path d="M15.25 13.5V17.5C15.25 18.4665 12.8995 19.25 10 19.25C7.10051 19.25 4.75 18.4665 4.75 17.5V13.5M15.25 13.5C15.25 14.4665 12.8995 15.25 10 15.25C7.10051 15.25 4.75 14.4665 4.75 13.5M15.25 13.5C15.25 12.5335 12.8995 11.75 10 11.75C7.10051 11.75 4.75 12.5335 4.75 13.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+							</svg>
+
+							<span class="text-xl font-bold">{{ walletBalance }}</span>
 						</div>
 					</nuxt-link>
 				</div>
@@ -127,7 +149,7 @@ export default {
 						<FormInput label="Habit Name" placeholder="Name of your habit.." required />
 					</div>
 					<div>
-						<FormSelect :options="options" label="Select Type"></FormSelect>
+						<FormSelect :options="habbitTypes" label="Select Type"></FormSelect>
 					</div>
 				</div>
 			</template>

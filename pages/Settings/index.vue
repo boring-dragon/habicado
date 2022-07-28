@@ -57,7 +57,7 @@ export default {
 };
 </script>
 <template>
-	<div class="overflow-y-scroll py-12 mx-auto space-y-6">
+	<div class="overflow-y-scroll py-12 mx-auto space-y-8 px-4">
 		<Portal to="header">
 			<h2 class="text-3xl font-bold text-primary">Settings</h2>
 		</Portal>
@@ -110,7 +110,7 @@ export default {
 			</form>
 		</div>
 
-		<div class="bg-white p-4 rounded-lg shadow-md">
+		<div class="p-4 rounded-lg">
 			<h3 class="text-center text-xl font-semibold mb-6">Danger Zone</h3>
 
 			<div class="space-y-6">

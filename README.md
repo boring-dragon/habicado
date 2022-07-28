@@ -28,6 +28,7 @@ $ yarn generate
 - [x] Design Mood Card ( Kim )
 - [x] Connect Mood Card to API
 - [x] Create a wallet for user when they register
+- [ ] Fix Bug in mood checking
 - [ ] Show Logged in User wallet balance
 - [ ] Ability to purchase characters from shop
 - [ ] Ability to change owned characters from inventory
