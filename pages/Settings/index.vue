@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       form: {
-        firstName: "",
+        firstName: "a",
 		lastName: "",
         email: "",
 		bio: "",
@@ -27,7 +27,12 @@ export default {
   },
 
   mounted() {
-	this.getUserDetails()
+	this.$axios.get('/api/getUserDetails').then(response => {
+			this.form.firstName = response.data.data.first_name
+			this.form.lastName = response.data.data.last_name
+			this.form.bio = response.data.data.bio
+			this.form.email = response.data.data.email
+		});
   },
 
   methods: {
@@ -46,17 +51,6 @@ export default {
 		).then(response => {
 			alert(response.data.message)
 		})
-	},
-
-	getUserDetails() {
-		this.$axios.get('/api/getUserDetails').then(response => {
-			console.log(response.data.data)
-			this.form.firstName = response.data.data.first_name
-			this.form.lastName = response.data.data.last_name
-			this.form.bio = response.data.data.bio
-			this.form.email = response.data.data.email
-			this.form.password = response.data.data.password
-		});
 	}
   },
 };
