@@ -36,27 +36,17 @@
 			</div>
 		</div>
 
-		<div class="p-5 px-5 bg-yellow-200 float-none rounded-xl">
+		<div class="p-5 px-4">
 			<div>
 				<div class="flex items-center justify-between">
-					<p class="font-semibold text-xl">Habbits</p>
+					<p class="font-semibold text-xl">Habits</p>
 
 					<p class="font-semibold text-md underline">see all</p>
 				</div>
 			</div>
 
-			<div class="space-y-4 mt-4">
-				<button v-for="habbit in sortHabbitsByStatus" class="flex items-center justify-center px-8 py-4 font-bold transition bg-secondary border-4 border-black rounded-xl focus:outline-none focus:ring shadow-[6px_6px_0_0_#000] hover:shadow-none active:bg-pink-50">
-					<div v-for="habbitType in habbitTypes">
-						<p class="ml-3"> Name: {{ habbit.name }}</p>
-						<p class="ml-3" v-if="habbitType.id === habbit.habbit_type_id">Type: {{ habbitType.name }}</p>
-						<p class="ml-3" v-if="habbitType.id === habbit.habbit_type_id">Description: {{ habbitType.description }}</p>
-					</div>
-				</button>
-			</div>
+
 		</div>
-
-
 
 		<!---
 		<div class="p-5 px-5 bg-secondary float-none rounded-xl">
@@ -134,8 +124,8 @@ export default {
         },
       ],
       moodChecked: false,
-	  habbits: [],
-	  habbitTypes: [],
+      habbits: [],
+      habbitTypes: [],
     };
   },
   computed: {
@@ -155,15 +145,15 @@ export default {
       )[0];
     },
 
-	sortHabbitsByStatus: function () {
-		const sortedHabbits = []
-		this.habbits.forEach(key=> {
-			if (key.status !== 0) {
-				sortedHabbits.push(key)
-			}
-		})
-		return sortedHabbits
-	}
+    sortHabbitsByStatus: function () {
+      const sortedHabbits = [];
+      this.habbits.forEach((key) => {
+        if (key.status !== 0) {
+          sortedHabbits.push(key);
+        }
+      });
+      return sortedHabbits;
+    },
   },
 
   mounted() {
@@ -171,8 +161,7 @@ export default {
   },
 
   beforeMount() {
-	  this.getHabbits();
-	  this.getHabbitTypes();
+    this.getHabbits();
   },
 
   methods: {
@@ -190,18 +179,11 @@ export default {
       });
     },
 
-	async getHabbits() {
+    async getHabbits() {
       this.$axios.get("/api/getHabbits").then((response) => {
-		this.habbits = response.data.data;
+        this.habbits = response.data.data;
       });
-    },
-
-	async getHabbitTypes() {
-      this.$axios.get("/api/getHabbitTypes").then((response) => {
-		this.habbitTypes = response.data.data;
-      });
-    },
-
+    }
   },
 };
 </script>
