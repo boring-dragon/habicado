@@ -1,5 +1,7 @@
 # Habicardo
 
+API at https://github.com/boring-dragon/habit-api
+
 ## Build Setup
 
 ```bash
