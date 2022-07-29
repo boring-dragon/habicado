@@ -3,6 +3,7 @@ import FormButton from "@/components/form/button.vue";
 import FormInput from "@/components/form/form-input.vue";
 import FormTextarea from "@/components/form/textarea.vue";
 import FormToggle from "@/components/form/toggle.vue";
+import DarkModeToggle from "@/components/form/dark-mode-toggle.vue";
 
 const Cookie = require("js-cookie");
 
@@ -10,7 +11,7 @@ export default {
   components: {
     FormButton,
     FormInput,
-    FormToggle,
+    FormToggle
   },
 
   data() {
@@ -115,7 +116,7 @@ export default {
 			<form class="px-4 space-y-6">
 				<div class="flex items-center justify-between gap-2">
 					<label class="block text-sm font-medium text-gray-700">Dark Mode</label>
-					<FormToggle v-model="form.darkMode"></FormToggle>
+					<DarkModeToggle></DarkModeToggle>
 				</div>
 
 				<div class="flex items-center justify-between gap-2">

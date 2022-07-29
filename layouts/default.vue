@@ -7,7 +7,7 @@ import FormCheckBox from "@/components/form/checkbox.vue";
 import FormTextarea from "@/components/form/textarea.vue";
 import FormDateInput from "@/components/form/date-input.vue";
 import { map } from "lodash";
-import Button from '../components/form/button.vue';
+import Button from "../components/form/button.vue";
 
 export default {
   components: {
@@ -74,13 +74,15 @@ export default {
       try {
         await this.$axios.post("api/createHabbit", this.form);
 
-		this.hideHabbitCreation();
+        this.$toast.success("Habit Added!");
 
-		this.form.name = "";
-		this.form.habbit_type_id = "";
-		this.form.description = "";
-		this.form.target_amount = null;
-		this.form.targeted_at = null;
+        this.hideHabbitCreation();
+
+        this.form.name = "";
+        this.form.habbit_type_id = "";
+        this.form.description = "";
+        this.form.target_amount = null;
+        this.form.targeted_at = null;
       } catch (e) {
         Object.keys(e.response.data.errors).forEach((key) => {
           Object.values(e.response.data.errors[key]).forEach((error) => {
@@ -103,7 +105,7 @@ export default {
 
 					<nuxt-link to="/profile">
 						<div class="w-16 h-16 rounded-full border border-primary hover:bg-secondary">
-							<img alt="Character" :src="$auth.user.character_img" />
+							<img :src="$auth.user.character_img" alt="Character" />
 						</div>
 						<div class="inline-flex items-center gap-2 mt-4">
 							<svg class="w-8 h-8 text-yellow-400" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

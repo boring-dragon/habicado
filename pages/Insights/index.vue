@@ -4,8 +4,6 @@
 			<h2 class="text-3xl font-bold text-primary">Insight</h2>
 		</Portal>
 		<div class="relative grid grid-cols-1 gap-x-14">
-			
-			
 			<section :class="[monthIdx === months.length - 1 && 'block', 'text-center']" :key="monthIdx" v-for="(month, monthIdx) in months">
 				<h2 class="font-semibold text-gray-900">{{ month.name }}</h2>
 				<div class="mt-6 grid grid-cols-7 text-xs leading-6 text-gray-500">
@@ -25,31 +23,13 @@
 			</section>
 		</div>
 		<section class="mt-12">
-			<h2 class="font-semibold text-gray-900">Habbits List</h2>
+			<h2 class="font-semibold text-gray-900">Habits Created Today</h2>
 			<ol class="mt-2 divide-y divide-gray-200 text-sm leading-6 text-gray-500">
-				<li class="py-4 sm:flex">
-					<time class="w-28 flex-none" datetime="2022-01-17">Wed, Jan 12</time>
-					<p class="mt-2 flex-auto sm:mt-0">Nothing on today’s schedule</p>
-				</li>
-				<li class="py-4 sm:flex">
-					<time class="w-28 flex-none" datetime="2022-01-19">Thu, Jan 13</time>
-					<p class="mt-2 flex-auto font-semibold text-gray-900 sm:mt-0">View house with real estate agent</p>
+				<li :key="habbit.id" class="py-4 sm:flex" v-for="habbit in habbits">
+					<p class="w-28 flex-none">Status {{ habbit.status }}</p>
+					<p class="mt-2 flex-auto font-semibold text-gray-900 sm:mt-0">{{ habbit.name }}</p>
 					<p class="flex-none sm:ml-6">
-						<time datetime="2022-01-13T14:30">2:30 PM</time> -
-						<time datetime="2022-01-13T16:30">4:30 PM</time>
-					</p>
-				</li>
-				<li class="py-4 sm:flex">
-					<time class="w-28 flex-none" datetime="2022-01-20">Fri, Jan 14</time>
-					<p class="mt-2 flex-auto font-semibold text-gray-900 sm:mt-0">Meeting with bank manager</p>
-					<p class="flex-none sm:ml-6">All day</p>
-				</li>
-				<li class="py-4 sm:flex">
-					<time class="w-28 flex-none" datetime="2022-01-18">Mon, Jan 17</time>
-					<p class="mt-2 flex-auto font-semibold text-gray-900 sm:mt-0">Sign paperwork at lawyers</p>
-					<p class="flex-none sm:ml-6">
-						<time datetime="2022-01-17T10:00">10:00 AM</time> -
-						<time datetime="2022-01-17T10:15">10:15 AM</time>
+						<time class="w-28 flex-none">{{ habbit.created_at }}</time>
 					</p>
 				</li>
 			</ol>
@@ -63,7 +43,7 @@ export default {
     return {
       months: [
         {
-          name: new Date().toLocaleString('default', { month: 'long' }),
+          name: new Date().toLocaleString("default", { month: "long" }),
           days: [
             { date: "2021-12-27" },
             { date: "2021-12-28" },
@@ -110,13 +90,19 @@ export default {
           ],
         },
       ],
+      habbits: [],
     };
   },
 
-  methods: {
-	async getHabbits() {
+  mounted() {
+    this.getHabbitsCreatedToday();
+  },
 
-	}
-  }
+  methods: {
+    async getHabbitsCreatedToday() {
+      const response = await this.$axios.get("/api/getHabbitsCreatedToday");
+      this.habbits = response.data.data;
+    },
+  },
 };
 </script>

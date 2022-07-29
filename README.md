@@ -15,6 +15,14 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+
+#IOS
+
+$ npx cap add ios
+ 
+$ npx cap open ios
+
 ```
 
 ### TODO
@@ -51,5 +59,6 @@ $ yarn generate
 - [x] Add Points to Wallet when habit is completed
 - [x] Show a Pretty Confetti Animation when the habit is completed
 - [x] Show currently Active Character
-- [ ] Make Insight Page Dynamic
+- [x] Get Habbits Created Today for Insight Page
+- [x] Make Insight Page Dynamic
 - [ ] Fix Bug in mood checking
