@@ -1,4 +1,6 @@
-# Habicardo
+# Habicado ( Part of Taylors college Computing Final projects)
+
+API at https://github.com/boring-dragon/habit-api
 
 ## Build Setup
 
