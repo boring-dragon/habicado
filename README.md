@@ -1,4 +1,4 @@
-# Habicado ( Part of Taylors college Computing Final projects)
+# Habicado ( Part of Taylors college Computing final project)
 
 API at https://github.com/boring-dragon/habit-api
 
