@@ -6,6 +6,15 @@ API at https://github.com/boring-dragon/habit-api
 
 ![database](database.png)
 
+
+## Tech used
+
+- Laravel ( API) https://github.com/boring-dragon/habit-api
+- Vue
+- Nuxt
+- Capacitor
+- Tailwindcss
+
 ## Build Setup
 
 ```bash
