@@ -1,5 +1,7 @@
 # Habicado ( Part of Taylors college Computing final project)
 
+Habicado is a habit tracking app built to encourage user's to break their bad habits by rewarding them with points when they complete more and more habits. These points (coins) can be used in app to purchase characters for your profile as a collectable that you can store and use.
+
 API at https://github.com/boring-dragon/habit-api
 
 ![screenshot](screenshot.png)
