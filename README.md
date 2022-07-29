@@ -2,6 +2,10 @@
 
 API at https://github.com/boring-dragon/habit-api
 
+![screenshot](screenshot.png)
+
+![database](database.png)
+
 ## Build Setup
 
 ```bash
